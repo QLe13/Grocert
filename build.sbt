@@ -12,8 +12,12 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 
 scalaVersion := "2.13.12"
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
+libraryDependencies ++= Seq(
+  "com.google.inject"            % "guice"                % "6.0.0",
+  "com.google.inject.extensions" % "guice-assistedinject" % "6.0.0",
+  guice,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
+)
 
 addCommandAlias(
   "validateCode",
