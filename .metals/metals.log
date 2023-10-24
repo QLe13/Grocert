@@ -36,3 +36,15 @@ WARNING: Unmatched cancel notification for request id 6
 2023.10.17 16:29:12 INFO  skipping build import with status 'Dismissed'
 2023.10.17 16:30:10 WARN  no build target for: /Users/q/Grocery/build.sbt
 2023.10.17 16:30:10 INFO  skipping build import with status 'Dismissed'
+2023.10.18 22:37:34 INFO  Shutting down server
+2023.10.18 22:37:34 INFO  shutting down Metals
+2023.10.18 22:37:34 INFO  Exiting server
+2023.10.24 14:46:14 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.83.1.
+2023.10.24 14:46:15 WARN  Build server is not auto-connectable.
+2023.10.24 14:46:15 WARN  no build target for: /Users/q/Grocery/build.sbt
+Oct 24, 2023 2:46:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+2023.10.24 14:46:16 INFO  no build target found for /Users/q/Grocery/build.sbt. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.24 14:46:17 INFO  time: code lens generation in 1.43s
+2023.10.24 14:46:17 INFO  time: code lens generation in 2.25s
+2023.10.24 14:59:32 WARN  no build target for: /Users/q/Grocery/ui-build.sbt

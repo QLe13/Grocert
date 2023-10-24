@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1>Welcome to {this.state.title}</h1>
+          <h1>Welcome to Grocery</h1>
           <nav>
             <Link to="scala">
               <img width="400" height="400" src={scalaLogo} alt="Scala Logo" />
@@ -57,18 +57,6 @@ class App extends Component {
           <Routes>
             <Route path="/:tech" element={<Tech />} />
           </Routes>
-          <div>
-            <h2>Check out the project on GitHub for more information</h2>
-            <h3>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/playframework/play-scala-react-seed"
-              >
-                play-scala-react-seed
-              </a>
-            </h3>
-          </div>
         </div>
       </Router>
     );
