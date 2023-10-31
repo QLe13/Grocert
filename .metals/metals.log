@@ -48,3 +48,56 @@ WARNING: Unmatched cancel notification for request id 6
 2023.10.24 14:46:17 INFO  time: code lens generation in 1.43s
 2023.10.24 14:46:17 INFO  time: code lens generation in 2.25s
 2023.10.24 14:59:32 WARN  no build target for: /Users/q/Grocery/ui-build.sbt
+2023.10.26 09:24:41 INFO  Shutting down server
+2023.10.26 09:24:41 INFO  shutting down Metals
+2023.10.26 09:24:41 INFO  Exiting server
+2023.10.31 14:41:16 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.83.1.
+2023.10.31 14:41:17 WARN  Build server is not auto-connectable.
+2023.10.31 14:41:32 INFO  running '/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/j2/3v2bm5f50lg1j048xdkhzpnw0000gn/T/metals14871096004963864527/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.10.31 14:41:32 INFO  [info] welcome to sbt 1.7.2 (Eclipse Adoptium Java 17.0.8)
+2023.10.31 14:41:32 INFO  [info] loading settings for project grocery-build-build-build from metals.sbt ...
+2023.10.31 14:41:32 INFO  [info] loading project definition from /Users/q/Grocery/project/project/project
+2023.10.31 14:41:32 INFO  [info] loading settings for project grocery-build-build from metals.sbt ...
+2023.10.31 14:41:32 INFO  [info] loading project definition from /Users/q/Grocery/project/project
+2023.10.31 14:41:34 INFO  [success] Generated .bloop/grocery-build-build.json
+2023.10.31 14:41:34 INFO  [success] Total time: 1 s, completed Oct 31, 2023, 2:41:34 PM
+2023.10.31 14:41:34 INFO  [info] loading settings for project grocery-build from metals.sbt,plugins.sbt ...
+2023.10.31 14:41:34 INFO  [info] loading project definition from /Users/q/Grocery/project
+2023.10.31 14:41:34 INFO  [success] Generated .bloop/grocery-build.json
+2023.10.31 14:41:34 INFO  [success] Total time: 0 s, completed Oct 31, 2023, 2:41:35 PM
+2023.10.31 14:41:34 INFO  [info] loading settings for project root from build.sbt,ui-build.sbt ...
+2023.10.31 14:41:34 INFO  [info]   __              __
+2023.10.31 14:41:34 INFO  [info]   \ \     ____   / /____ _ __  __
+2023.10.31 14:41:34 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2023.10.31 14:41:34 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2023.10.31 14:41:34 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2023.10.31 14:41:34 INFO  [info]       /_/               /____/
+2023.10.31 14:41:34 INFO  [info] 
+2023.10.31 14:41:34 INFO  [info] Version 2.8.19 running Java 17.0.8
+2023.10.31 14:41:34 INFO  [info] 
+2023.10.31 14:41:34 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2023.10.31 14:41:34 INFO  [info] https://www.playframework.com/sponsors
+2023.10.31 14:41:34 INFO  [info] 
+2023.10.31 14:41:34 INFO  [info] Running Play on Java 17 is experimental. Tweaks are necessary:
+2023.10.31 14:41:34 INFO  [info] https://github.com/playframework/playframework/releases/2.8.15
+2023.10.31 14:41:34 INFO  [info] 
+2023.10.31 14:41:38 INFO  [success] Generated .bloop/root.json
+2023.10.31 14:41:38 INFO  [success] Generated .bloop/root-test.json
+2023.10.31 14:41:38 INFO  [success] Total time: 3 s, completed Oct 31, 2023, 2:41:38 PM
+2023.10.31 14:41:38 INFO  time: ran 'sbt bloopInstall' in 6.34s
+2023.10.31 14:41:38 INFO  Attempting to connect to the build server...
+2023.10.31 14:41:38 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.10.31 14:41:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.10.31 14:41:42 INFO  Attempting to connect to the build server...
+2023.10.31 14:41:42 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.10.31 14:41:42 INFO  Attempting to connect to the build server...
+2023.10.31 14:41:42 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.10.31 14:41:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.10.31 14:41:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.10.31 14:41:44 INFO  time: Connected to build server in 5.77s
+2023.10.31 14:41:44 INFO  Connected to Build server: Bloop v1.5.11
+2023.10.31 14:41:45 INFO  Required scalafmt dialect rewrite to 'scala213'. Directories:
+- app
+- test
+- target/scala-2.13/routes/main
+2023.10.31 14:41:49 INFO  time: indexed workspace in 4.86s
