@@ -256,3 +256,5 @@ Caused by: java.nio.channels.AsynchronousCloseException
     "message": "No project associated with Uri(file:/Users/q/play-scala-react-seed/project/?id\u003dplay-scala-react-seed-build)"
   }
 }
+Nov 03, 2023 12:32:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

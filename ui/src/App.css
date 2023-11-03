@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-image: url("Background.png");
+    background-image: url("images/Background.png");
 }
 
 .top-nav-bar{
@@ -59,4 +59,32 @@
     border-radius: 25px;
     padding: 10px;
     box-shadow: 1px 1px 2px 2px;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    justify-content: space-between;
+    padding-top: 10vh;
+}
+.home-logo {
+    background-color: #FFF7E1;
+    display: flex;
+    border-radius: 80px;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+}
+.home-logo img {
+    width: 50%;
+    height: auto;
+}
+
+.home-search-bar {
+    width: 100%;
 }

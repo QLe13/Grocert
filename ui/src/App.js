@@ -8,7 +8,7 @@ import {
 import Client from "./Client";
 import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
-
+import logo from "./images/BudgetBites.png";
 
 
 
@@ -29,7 +29,12 @@ const NavBar = () => {
 const Home = () => {  
   return (
     <div className="home">
-        <SearchBar />
+      <div className="home-logo">
+        <img src={logo} alt="BudgetBites Logo"/>
+      </div>
+      <div className="home-search-bar">
+        <SearchBar/>
+      </div>
     </div>
   );
 }
