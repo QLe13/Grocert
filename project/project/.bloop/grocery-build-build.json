@@ -198,7 +198,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
+                "home": "/opt/homebrew/Cellar/openjdk/20.0.2/libexec/openjdk.jdk/Contents/Home",
                 "options": [
                     "-Duser.dir=/Users/q/Grocery/project/project"
                 ]
@@ -223,6 +223,11 @@
                             "name": "sbt-bloop",
                             "classifier": "sources",
                             "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.5.11/sbt-bloop-1.5.11-sources.jar"
+                        },
+                        {
+                            "name": "sbt-bloop",
+                            "classifier": "javadoc",
+                            "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.5.11/sbt-bloop-1.5.11-javadoc.jar"
                         }
                     ]
                 },
@@ -240,6 +245,11 @@
                             "name": "bloop-config_2.12",
                             "classifier": "sources",
                             "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/1.5.5/bloop-config_2.12-1.5.5-sources.jar"
+                        },
+                        {
+                            "name": "bloop-config_2.12",
+                            "classifier": "javadoc",
+                            "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/1.5.5/bloop-config_2.12-1.5.5-javadoc.jar"
                         }
                     ]
                 },
@@ -257,6 +267,11 @@
                             "name": "jsoniter-scala-core_2.12",
                             "classifier": "sources",
                             "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.4.0/jsoniter-scala-core_2.12-2.4.0-sources.jar"
+                        },
+                        {
+                            "name": "jsoniter-scala-core_2.12",
+                            "classifier": "javadoc",
+                            "path": "/Users/q/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.4.0/jsoniter-scala-core_2.12-2.4.0-javadoc.jar"
                         }
                     ]
                 },

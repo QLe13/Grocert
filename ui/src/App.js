@@ -3,21 +3,36 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useParams,
 } from "react-router-dom";
 
-import reactLogo from "./images/react.svg";
-import playLogo from "./images/play.svg";
-import scalaLogo from "./images/scala.svg";
 import Client from "./Client";
-
+import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
 
-const Tech = () => {
-  const params = useParams();
-  return <div>Current Route: {params.tech}</div>;
-};
+
+
+
+const NavBar = () => {
+  return (
+    <nav className="top-nav-bar">
+        <div className="logo">BudgetBites</div>
+        <div className="nav-links">
+            <button>About us</button>
+            <button>Groceries</button>
+            <button>Cart(0)</button>
+        </div>
+        <button className="support-button">Support</button>
+    </nav>
+  );
+}
+
+const Home = () => {  
+  return (
+    <div className="home">
+        <SearchBar />
+    </div>
+  );
+}
 
 class App extends Component {
   constructor(props) {
@@ -37,25 +52,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1>Welcome to Grocery</h1>
-          <nav>
-            <Link to="scala">
-              <img width="400" height="400" src={scalaLogo} alt="Scala Logo" />
-            </Link>
-            <Link to="play">
-              <img
-                width="400"
-                height="400"
-                src={playLogo}
-                alt="Play Framework Logo"
-              />
-            </Link>
-            <Link to="react">
-              <img width="400" height="400" src={reactLogo} alt="React Logo" />
-            </Link>
-          </nav>
+          <NavBar />
           <Routes>
-            <Route path="/:tech" element={<Tech />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </div>
       </Router>
