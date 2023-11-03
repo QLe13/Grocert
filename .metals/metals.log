@@ -247,3 +247,12 @@ Caused by: java.nio.channels.AsynchronousCloseException
 2023.11.03 10:44:37 INFO  time: compiled play-scala-react-seed-build in 3.87s
 2023.11.03 10:45:17 INFO  compiling root (7 scala sources and 1 java source)
 2023.11.03 10:45:21 INFO  time: compiled root in 3.42s
+2023.11.03 10:50:54 ERROR Build server error: No project associated with Uri(file:/Users/q/play-scala-react-seed/project/?id=play-scala-react-seed-build)
+2023.11.03 10:50:54 INFO  {
+  "jsonrpc": "2.0",
+  "id": "21",
+  "error": {
+    "code": -32600,
+    "message": "No project associated with Uri(file:/Users/q/play-scala-react-seed/project/?id\u003dplay-scala-react-seed-build)"
+  }
+}
