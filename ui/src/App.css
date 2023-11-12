@@ -6,62 +6,6 @@
     background-image: url("images/Background.png");
 }
 
-.top-nav-bar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 10%;
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    border-radius: 25px;
-    background-color: #FFF7E1;
-    padding: 10px;
-    box-shadow: 1px 1px 2px 2px;
-}
-.logo {
-    color: #000000;
-    font-weight: bold;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    background-color: #FFF7E1;
-    padding: 10px;
-    box-shadow: 1px 1px 2px 2px;
-}
-
-.nav-links button {
-    background-color: #FFF7E1;
-    border: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.support-button {
-    background-color: #E96A4D;
-    border: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    padding: 10px;
-    box-shadow: 1px 1px 2px 2px;
-}
-
-
 .home {
     display: flex;
     flex-direction: column;
@@ -88,3 +32,150 @@
 .home-search-bar {
     width: 100%;
 }
+
+.search {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.search-sections {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    width: 70%;
+    height: 95%;
+}
+.search-sections-search-bar {
+    width: 70%;
+}
+.search-result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.search-result {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5vh;
+}
+
+.search-result img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.search-result-item {
+    display: flex;
+    width: 13vw; 
+    height: 30vh; 
+}
+
+.search-result-item-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px 2px;
+    background-color: #FFF7E1;
+    cursor: pointer;
+}
+
+.search-result-item:hover .search-result-item-inner {
+    transform: rotateY(180deg);
+}
+
+.search-result-item-front, .search-result-item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+.search-result-item-front {
+    /* Styling for front side */
+}
+
+.search-result-item-back {
+    /* Styling for back side */
+    transform: rotateY(180deg);
+}
+
+.search-result-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.search-result-previous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 50%;
+    background-color: #FFF7E1;
+    cursor: pointer;
+}
+.search-result-previous:hover {
+    background-color: #E96A4D;
+    transition: 0.5s;
+}
+.search-result-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 50%;
+    background-color: #FFF7E1;
+    cursor: pointer;
+}
+.search-result-next:hover {
+    background-color: #E96A4D;
+    transition: 0.5s;
+}
+
+
+.search-result-pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 50%;
+    background-color: #FFF7E1;
+    cursor: pointer;
+}
+.search-result-pagination-item:hover {
+    background-color: #E96A4D;
+    transition: 0.5s;
+}
+  
+
+  
+ 
+  
