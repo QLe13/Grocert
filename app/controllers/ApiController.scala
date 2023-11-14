@@ -42,6 +42,7 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
   }
 
   def calculateCart = Action { implicit request =>
+    println(request.body)
     withJsonBody[CalculateCartRequest] { req =>
       Ok(Json.toJson(ExampleObjects.exampleCartCalculation))
     }
