@@ -9,6 +9,8 @@ import  play.api.libs.json._
 case class Item(id: Int, name: String, unit: String, amount: Int, image: String, category: String)
 case class ItemAndCost(item: Item, cost: Int)
 case class StoreCalculation(storeId: Int, storeName: String, totalCost: Double, cart: List[ItemAndCost])
+case class ItemSearchRequest(searchTerm: String)
+case class CalculateCartRequest(zipCode: Int, itemIds: List[Int])
 
 @Singleton
 class ApiController @Inject()(cc: ControllerComponents) extends AbstractController(cc){
@@ -18,13 +20,31 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
   implicit val itemAndCostWrites = Json.writes[ItemAndCost]
   implicit val storeCalculationReads = Json.reads[StoreCalculation]
   implicit val storeCalculationWrites = Json.writes[StoreCalculation]
+  implicit val itemSearchRequestReads = Json.reads[ItemSearchRequest]
+  implicit val calculateCartRequestReads = Json.reads[CalculateCartRequest]
+
+
+  def withJsonBody[A](f: A => Result)(implicit request: Request[AnyContent], reads: Reads[A]) = {
+    request.body.asJson.map { body => 
+      Json.fromJson[A](body) match {
+        case JsSuccess(a, path) => f(a)
+        case e @ JsError(_) => 
+          println(e)
+          BadRequest(e.toString())
+      }
+    }.getOrElse(BadRequest("Bad request"))
+  }
   
-  def itemSearch = Action {
-    Ok(Json.toJson(List(ExampleObjects.exampleItems)))
+  def itemSearch = Action { implicit request =>
+    withJsonBody[ItemSearchRequest] { req =>
+      Ok(Json.toJson(List(ExampleObjects.exampleItems)))
+    }
   }
 
-  def calculateCart = Action {
-    Ok(Json.toJson(ExampleObjects.exampleCartCalculation))
+  def calculateCart = Action { implicit request =>
+    withJsonBody[CalculateCartRequest] { req =>
+      Ok(Json.toJson(ExampleObjects.exampleCartCalculation))
+    }
   }
 }
 
