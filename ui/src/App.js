@@ -1,5 +1,5 @@
 import React, { Component,useState, useEffect } from "react";
-
+import {axios} from "./axios";
 import {
   BrowserRouter as Router,
   Routes,
@@ -128,6 +128,17 @@ const Home = () => {
 
   const searchItem = () => {
     setHaveSearch([...sampleItems]);
+    axios.get("/api/itemSearch", {
+      params: {
+        searchTerm: search,
+      }
+    })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
     console.log(search);
     //remember to map the item to have a selected propertys
     // To do
