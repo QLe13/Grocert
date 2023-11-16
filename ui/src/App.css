@@ -39,6 +39,7 @@
     margin-left: 10%;
     width: 90%;
     height: 80%;
+    justify-content: space-between;
 }
 
 .search-sections {
@@ -173,6 +174,12 @@
 .search-result-pagination-item:hover {
     background-color: #E96A4D;
     transition: 0.5s;
+}
+
+
+.current-cart {
+    width: 25%;
+    height: 110%
 }
   
 

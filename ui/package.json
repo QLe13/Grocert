@@ -25,6 +25,8 @@
     "allowedHosts": ["localhost", ".localhost"],
     "proxy": "https://localhost:9000/"
     },
+  "_comment":"'proxy': 'https://localhost:9000/' is for production only. It is not used in dev."
+  ,
   "browserslist": {
     "production": [
       ">0.2%",

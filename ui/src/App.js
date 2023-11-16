@@ -9,6 +9,7 @@ import {
 import Client from "./Client";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NavBar from "./components/NavBar/NavBar";
+import ShowCart from "./components/ShowCart/ShowCart";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
 import sampleGroceries from "./images/sampleGrocery.png";
@@ -203,7 +204,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
+            <div className="current-cart">
+                <ShowCart/>
+            </div>
           </div>
 
           </>
