@@ -2,158 +2,158 @@ import React from "react";
 import "./ShowCart.css";
 import { useState } from "react";
 
-// const sampleItems = [
-//     {
-//       "id": 487654,
-//       "name": "Apple",
-//       "unit": "kg",
-//       "amount": 10,
-//       "image": "http://linktoappleimage.com",
-//       "category": "fruit"
-//     },
-//     {
-//       "id": 587965,
-//       "name": "Carrot",
-//       "unit": "bag",
-//       "amount": 3,
-//       "image": "http://linktocarrotimage.com",
-//       "category": "vegetables"
-//     },
-//     {
-//       "id": 698745,
-//       "name": "Milk",
-//       "unit": "liter",
-//       "amount": 2,
-//       "image": "http://linktomilkimage.com",
-//       "category": "dairy"
-//     },
-//     {
-//       "id": 798132,
-//       "name": "Bread",
-//       "unit": "loaf",
-//       "amount": 1,
-//       "image": "http://linktobreadimage.com",
-//       "category": "bakery"
-//     },
-//     {
-//       "id": 908765,
-//       "name": "Eggs",
-//       "unit": "dozen",
-//       "amount": 4,
-//       "image": "http://linktoeggsimage.com",
-//       "category": "poultry"
-//     },
-//     {
-//       "id": 487654,
-//       "name": "Apple",
-//       "unit": "kg",
-//       "amount": 10,
-//       "image": "http://linktoappleimage.com",
-//       "category": "fruit"
-//     },
-//     {
-//       "id": 587965,
-//       "name": "Carrot",
-//       "unit": "bag",
-//       "amount": 3,
-//       "image": "http://linktocarrotimage.com",
-//       "category": "vegetables"
-//     },
-//     {
-//       "id": 698745,
-//       "name": "Milk",
-//       "unit": "liter",
-//       "amount": 2,
-//       "image": "http://linktomilkimage.com",
-//       "category": "dairy"
-//     },
-//     {
-//       "id": 798132,
-//       "name": "Bread",
-//       "unit": "loaf",
-//       "amount": 1,
-//       "image": "http://linktobreadimage.com",
-//       "category": "bakery"
-//     },
-//     {
-//       "id": 908765,
-//       "name": "Eggs",
-//       "unit": "dozen",
-//       "amount": 4,
-//       "image": "http://linktoeggsimage.com",
-//       "category": "poultry"
-//     },
-//     {
-//       "id": 698745,
-//       "name": "Milk",
-//       "unit": "liter",
-//       "amount": 2,
-//       "image": "http://linktomilkimage.com",
-//       "category": "dairy"
-//     },
-//     {
-//       "id": 798132,
-//       "name": "Bread",
-//       "unit": "loaf",
-//       "amount": 1,
-//       "image": "http://linktobreadimage.com",
-//       "category": "bakery"
-//     },
-//     {
-//       "id": 908765,
-//       "name": "Eggs",
-//       "unit": "dozen",
-//       "amount": 4,
-//       "image": "http://linktoeggsimage.com",
-//       "category": "poultry"
-//     },
-//     {
-//       "id": 487654,
-//       "name": "Apple",
-//       "unit": "kg",
-//       "amount": 10,
-//       "image": "http://linktoappleimage.com",
-//       "category": "fruit"
-//     },
-//     {
-//       "id": 587965,
-//       "name": "Carrot",
-//       "unit": "bag",
-//       "amount": 3,
-//       "image": "http://linktocarrotimage.com",
-//       "category": "vegetables"
-//     },
-//     {
-//       "id": 698745,
-//       "name": "Milk",
-//       "unit": "liter",
-//       "amount": 2,
-//       "image": "http://linktomilkimage.com",
-//       "category": "dairy"
-//     },
-//     {
-//       "id": 798132,
-//       "name": "Bread",
-//       "unit": "loaf",
-//       "amount": 1,
-//       "image": "http://linktobreadimage.com",
-//       "category": "bakery"
-//     },
-//     {
-//       "id": 908765,
-//       "name": "Eggs",
-//       "unit": "dozen",
-//       "amount": 4,
-//       "image": "http://linktoeggsimage.com",
-//       "category": "poultry"
-//     }
+const sampleItems = [
+    {
+      "id": 487654,
+      "name": "Apple",
+      "unit": "kg",
+      "amount": 10,
+      "image": "http://linktoappleimage.com",
+      "category": "fruit"
+    },
+    {
+      "id": 587965,
+      "name": "Carrot",
+      "unit": "bag",
+      "amount": 3,
+      "image": "http://linktocarrotimage.com",
+      "category": "vegetables"
+    },
+    {
+      "id": 698745,
+      "name": "Milk",
+      "unit": "liter",
+      "amount": 2,
+      "image": "http://linktomilkimage.com",
+      "category": "dairy"
+    },
+    {
+      "id": 798132,
+      "name": "Bread",
+      "unit": "loaf",
+      "amount": 1,
+      "image": "http://linktobreadimage.com",
+      "category": "bakery"
+    },
+    {
+      "id": 908765,
+      "name": "Eggs",
+      "unit": "dozen",
+      "amount": 4,
+      "image": "http://linktoeggsimage.com",
+      "category": "poultry"
+    },
+    {
+      "id": 487654,
+      "name": "Apple",
+      "unit": "kg",
+      "amount": 10,
+      "image": "http://linktoappleimage.com",
+      "category": "fruit"
+    },
+    {
+      "id": 587965,
+      "name": "Carrot",
+      "unit": "bag",
+      "amount": 3,
+      "image": "http://linktocarrotimage.com",
+      "category": "vegetables"
+    },
+    {
+      "id": 698745,
+      "name": "Milk",
+      "unit": "liter",
+      "amount": 2,
+      "image": "http://linktomilkimage.com",
+      "category": "dairy"
+    },
+    {
+      "id": 798132,
+      "name": "Bread",
+      "unit": "loaf",
+      "amount": 1,
+      "image": "http://linktobreadimage.com",
+      "category": "bakery"
+    },
+    {
+      "id": 908765,
+      "name": "Eggs",
+      "unit": "dozen",
+      "amount": 4,
+      "image": "http://linktoeggsimage.com",
+      "category": "poultry"
+    },
+    {
+      "id": 698745,
+      "name": "Milk",
+      "unit": "liter",
+      "amount": 2,
+      "image": "http://linktomilkimage.com",
+      "category": "dairy"
+    },
+    {
+      "id": 798132,
+      "name": "Bread",
+      "unit": "loaf",
+      "amount": 1,
+      "image": "http://linktobreadimage.com",
+      "category": "bakery"
+    },
+    {
+      "id": 908765,
+      "name": "Eggs",
+      "unit": "dozen",
+      "amount": 4,
+      "image": "http://linktoeggsimage.com",
+      "category": "poultry"
+    },
+    {
+      "id": 487654,
+      "name": "Apple",
+      "unit": "kg",
+      "amount": 10,
+      "image": "http://linktoappleimage.com",
+      "category": "fruit"
+    },
+    {
+      "id": 587965,
+      "name": "Carrot",
+      "unit": "bag",
+      "amount": 3,
+      "image": "http://linktocarrotimage.com",
+      "category": "vegetables"
+    },
+    {
+      "id": 698745,
+      "name": "Milk",
+      "unit": "liter",
+      "amount": 2,
+      "image": "http://linktomilkimage.com",
+      "category": "dairy"
+    },
+    {
+      "id": 798132,
+      "name": "Bread",
+      "unit": "loaf",
+      "amount": 1,
+      "image": "http://linktobreadimage.com",
+      "category": "bakery"
+    },
+    {
+      "id": 908765,
+      "name": "Eggs",
+      "unit": "dozen",
+      "amount": 4,
+      "image": "http://linktoeggsimage.com",
+      "category": "poultry"
+    }
   
-//   ]
+  ]
 
 const ShowCart = (props) => {
 
     const [zipCode, setZipCode] = useState("");
-    const [cartItems, setCartItems] = useState([]);
+    // const [cartItems, setCartItems] = useState([]);
 
 
 
@@ -164,7 +164,7 @@ const ShowCart = (props) => {
             type="number" 
             placeholder="Enter Zip Code:" value={zipCode} onChange={(e) => setZipCode(e.target.value)}/>
             <div className="show-cart-items">
-                {cartItems.map((item) => {
+                {sampleItems.map((item) => {
                     return (
                         <div className="show-cart-item-info">
                             <div className="show-cart-item-name">{item.name}</div>
