@@ -14,14 +14,14 @@ case class CalculateCartRequest(zipCode: Int, itemIds: List[Int])
 
 @Singleton
 class ApiController @Inject()(cc: ControllerComponents) extends AbstractController(cc){
-  implicit val itemReads = Json.reads[Item]
-  implicit val itemWrites = Json.writes[Item]
-  implicit val itemAndCostReads = Json.reads[ItemAndCost]
-  implicit val itemAndCostWrites = Json.writes[ItemAndCost]
-  implicit val storeCalculationReads = Json.reads[StoreCalculation]
-  implicit val storeCalculationWrites = Json.writes[StoreCalculation]
-  implicit val itemSearchRequestReads = Json.reads[ItemSearchRequest]
-  implicit val calculateCartRequestReads = Json.reads[CalculateCartRequest]
+  implicit val itemReads: play.api.libs.json.Reads[controllers.Item] = Json.reads[Item]
+  implicit val itemWrites: play.api.libs.json.OWrites[controllers.Item]= Json.writes[Item]
+  implicit val itemAndCostReads: play.api.libs.json.Reads[controllers.ItemAndCost]= Json.reads[ItemAndCost]
+  implicit val itemAndCostWrites: play.api.libs.json.OWrites[controllers.ItemAndCost]= Json.writes[ItemAndCost]
+  implicit val storeCalculationReads: play.api.libs.json.Reads[controllers.StoreCalculation]= Json.reads[StoreCalculation]
+  implicit val storeCalculationWrites: play.api.libs.json.OWrites[controllers.StoreCalculation]= Json.writes[StoreCalculation]
+  implicit val itemSearchRequestReads: play.api.libs.json.Reads[controllers.ItemSearchRequest]= Json.reads[ItemSearchRequest]
+  implicit val calculateCartRequestReads: play.api.libs.json.Reads[controllers.CalculateCartRequest]= Json.reads[CalculateCartRequest]
 
 
   def withJsonBody[A](f: A => Result)(implicit request: Request[AnyContent], reads: Reads[A]) = {
@@ -35,10 +35,8 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
     }.getOrElse(BadRequest("Bad request"))
   }
   
-  def itemSearch = Action { implicit request =>
-    withJsonBody[ItemSearchRequest] { req =>
-      Ok(Json.toJson(List(ExampleObjects.exampleItems)))
-    }
+  def itemSearch(searchTerm: String) = Action { implicit request =>
+    Ok(Json.toJson(List(ExampleObjects.exampleItems)))
   }
 
   def calculateCart = Action { implicit request =>
