@@ -10,6 +10,7 @@ import Client from "./Client";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NavBar from "./components/NavBar/NavBar";
 import ShowCart from "./components/ShowCart/ShowCart";
+import GetCarts from "./components/GetCarts/GetCarts";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
 import sampleGroceries from "./images/sampleGrocery.png";
@@ -20,11 +21,22 @@ const Home = () => {
 
   const [search, setSearch] = useState("");
   const [haveSearched, setHaveSearch] = useState([]);
+
+  // for pagination
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(Math.ceil(haveSearched.length/itemsPerPage));
   const [currentItems, setCurrentItems] = useState([]);
+  //
+
+  // for session cart: items that are selected at the moment
   const [sessionCart, setSessionCart] = useState([]);
+  //
+
+  // for calculated carts: storing calculated carts returned from the api
+  const [calculateCarts, setCalculateCarts] = useState([]);
+  const [showCalculateCarts, setShowCalculateCarts] = useState(false);
+  //
 
 
   useEffect(() => {
@@ -53,13 +65,15 @@ const Home = () => {
       newSessionCart.splice(index, 1);
     }
     setSessionCart(newSessionCart);
-
   }
+  
 
+
+  // handle searching and switching UI
   const searchItem = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`/api/itemSearch?searchTerm=${search}`);
+      const res = await axios.get(`/itemSearch?searchTerm=${search}`);
       const innerData = res.data[0]; // Accessing the first element which is the actual array of items
       const mappedData = innerData.map((item) => ({
         ...item,
@@ -74,7 +88,8 @@ const Home = () => {
   
 
   return (
-        haveSearched.length===0 ? (
+      <>
+        {haveSearched.length===0 ? (
           <>
             <div className="home">
                 <div className="home-logo">
@@ -145,15 +160,14 @@ const Home = () => {
               </div>
             </div>
             <div className="current-cart">
-                <ShowCart sessionCart = {sessionCart} setSessionCart={setSessionCart}/>
+                <ShowCart sessionCart = {sessionCart} setSessionCart={setSessionCart} setShowCalculateCarts={setShowCalculateCarts} setCalculateCarts={setCalculateCarts}/>
             </div>
           </div>
 
           </>
-        )
-      
-    
-
+        )}
+        {showCalculateCarts && <GetCarts calculateCarts={calculateCarts} setCalculateCarts={setCalculateCarts} setShowCalculateCarts={setShowCalculateCarts}/>}
+      </>
   );
 }
 
