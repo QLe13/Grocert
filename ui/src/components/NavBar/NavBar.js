@@ -3,9 +3,14 @@ import "./NavBar.css";
 
 
 const NavBar = () => {
+
+  const handleReload = () => {
+    window.location.reload()
+  }
+  
     return (
       <nav className="top-nav-bar">
-          <div className="logo">BudgetBites</div>
+          <div className="logo" onClick={handleReload}>BudgetBites</div>
           <div className="nav-links">
               <button>About us</button>
               <button>Groceries</button>
