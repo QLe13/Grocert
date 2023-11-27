@@ -80,6 +80,7 @@ const Home = () => {
         "selected": false,
         "image": sampleGroceries,
       }));
+      console.log(mappedData);
       setHaveSearch(mappedData);
     } catch (err) {
       console.log(err);
