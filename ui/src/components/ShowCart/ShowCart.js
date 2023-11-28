@@ -1,161 +1,34 @@
 import React from "react";
 import "./ShowCart.css";
 import { useState } from "react";
+import {axios} from "../../axios";
+import CircularProgress from '@mui/material/CircularProgress';
 
-const sampleItems = [
-    {
-      "id": 487654,
-      "name": "Apple",
-      "unit": "kg",
-      "amount": 10,
-      "image": "http://linktoappleimage.com",
-      "category": "fruit"
-    },
-    {
-      "id": 587965,
-      "name": "Carrot",
-      "unit": "bag",
-      "amount": 3,
-      "image": "http://linktocarrotimage.com",
-      "category": "vegetables"
-    },
-    {
-      "id": 698745,
-      "name": "Milk",
-      "unit": "liter",
-      "amount": 2,
-      "image": "http://linktomilkimage.com",
-      "category": "dairy"
-    },
-    {
-      "id": 798132,
-      "name": "Bread",
-      "unit": "loaf",
-      "amount": 1,
-      "image": "http://linktobreadimage.com",
-      "category": "bakery"
-    },
-    {
-      "id": 908765,
-      "name": "Eggs",
-      "unit": "dozen",
-      "amount": 4,
-      "image": "http://linktoeggsimage.com",
-      "category": "poultry"
-    },
-    {
-      "id": 487654,
-      "name": "Apple",
-      "unit": "kg",
-      "amount": 10,
-      "image": "http://linktoappleimage.com",
-      "category": "fruit"
-    },
-    {
-      "id": 587965,
-      "name": "Carrot",
-      "unit": "bag",
-      "amount": 3,
-      "image": "http://linktocarrotimage.com",
-      "category": "vegetables"
-    },
-    {
-      "id": 698745,
-      "name": "Milk",
-      "unit": "liter",
-      "amount": 2,
-      "image": "http://linktomilkimage.com",
-      "category": "dairy"
-    },
-    {
-      "id": 798132,
-      "name": "Bread",
-      "unit": "loaf",
-      "amount": 1,
-      "image": "http://linktobreadimage.com",
-      "category": "bakery"
-    },
-    {
-      "id": 908765,
-      "name": "Eggs",
-      "unit": "dozen",
-      "amount": 4,
-      "image": "http://linktoeggsimage.com",
-      "category": "poultry"
-    },
-    {
-      "id": 698745,
-      "name": "Milk",
-      "unit": "liter",
-      "amount": 2,
-      "image": "http://linktomilkimage.com",
-      "category": "dairy"
-    },
-    {
-      "id": 798132,
-      "name": "Bread",
-      "unit": "loaf",
-      "amount": 1,
-      "image": "http://linktobreadimage.com",
-      "category": "bakery"
-    },
-    {
-      "id": 908765,
-      "name": "Eggs",
-      "unit": "dozen",
-      "amount": 4,
-      "image": "http://linktoeggsimage.com",
-      "category": "poultry"
-    },
-    {
-      "id": 487654,
-      "name": "Apple",
-      "unit": "kg",
-      "amount": 10,
-      "image": "http://linktoappleimage.com",
-      "category": "fruit"
-    },
-    {
-      "id": 587965,
-      "name": "Carrot",
-      "unit": "bag",
-      "amount": 3,
-      "image": "http://linktocarrotimage.com",
-      "category": "vegetables"
-    },
-    {
-      "id": 698745,
-      "name": "Milk",
-      "unit": "liter",
-      "amount": 2,
-      "image": "http://linktomilkimage.com",
-      "category": "dairy"
-    },
-    {
-      "id": 798132,
-      "name": "Bread",
-      "unit": "loaf",
-      "amount": 1,
-      "image": "http://linktobreadimage.com",
-      "category": "bakery"
-    },
-    {
-      "id": 908765,
-      "name": "Eggs",
-      "unit": "dozen",
-      "amount": 4,
-      "image": "http://linktoeggsimage.com",
-      "category": "poultry"
-    }
-  
-  ]
 
 const ShowCart = (props) => {
 
     const [zipCode, setZipCode] = useState("");
-    // const [cartItems, setCartItems] = useState([]);
+    const [getCalculateCartsLoading, setGetCalculateCartsLoading] = useState(false);
 
+    const toggleRemoveItem = (ind) => {
+        const newSessionCart = [...props.sessionCart];
+        newSessionCart.splice(ind, 1);
+        props.setSessionCart(newSessionCart);
+    }
 
+    const getCarts = async () => {
+    try{
+            const cart = await axios.post("/calculateCart", {
+            zipCode: parseInt(zipCode, 10),
+            itemIds: props.sessionCart.map((item) => item.id),
+        });
+        props.setShowCalculateCarts(true);
+        props.setCalculateCarts(cart["data"]);
+        setGetCalculateCartsLoading(false);
+    } catch (err) {
+        console.log(err);
+        setGetCalculateCartsLoading(false);
+    }}
 
     return (
         <div className="show-cart">
@@ -164,17 +37,25 @@ const ShowCart = (props) => {
             type="number" 
             placeholder="Enter Zip Code:" value={zipCode} onChange={(e) => setZipCode(e.target.value)}/>
             <div className="show-cart-items">
-                {sampleItems.map((item) => {
+                {props.sessionCart.map((item, ind) => {
                     return (
                         <div className="show-cart-item-info">
                             <div className="show-cart-item-name">{item.name}</div>
-                            <div className="show-cart-item-remove">-</div>
+                            <div className="show-cart-item-remove" 
+                                 onClick={() => toggleRemoveItem(ind)}>-</div>
                         </div>
                     )
                 })}
             </div>
             <div className="show-cart-get-cart">
-                <button className="show-cart-get-cart-button">Get Cart</button>
+                {
+                    !getCalculateCartsLoading ?
+                    <button className="show-cart-get-cart-button" onClick={()=>{
+                        setGetCalculateCartsLoading(true);
+                        getCarts();
+                    }}>Get Carts</button> :
+                    <CircularProgress color="inherit" />
+                }
             </div>
         </div>
     )

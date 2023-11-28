@@ -10,96 +10,10 @@ import Client from "./Client";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NavBar from "./components/NavBar/NavBar";
 import ShowCart from "./components/ShowCart/ShowCart";
+import GetCarts from "./components/GetCarts/GetCarts";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
 import sampleGroceries from "./images/sampleGrocery.png";
-
-const sampleItems = [
-  {
-    "id": 487654,
-    "name": "Apple",
-    "unit": "kg",
-    "amount": 10,
-    "image": "http://linktoappleimage.com",
-    "category": "fruit"
-  },
-  {
-    "id": 587965,
-    "name": "Carrot",
-    "unit": "bag",
-    "amount": 3,
-    "image": "http://linktocarrotimage.com",
-    "category": "vegetables"
-  },
-  {
-    "id": 698745,
-    "name": "Milk",
-    "unit": "liter",
-    "amount": 2,
-    "image": "http://linktomilkimage.com",
-    "category": "dairy"
-  },
-  {
-    "id": 798132,
-    "name": "Bread",
-    "unit": "loaf",
-    "amount": 1,
-    "image": "http://linktobreadimage.com",
-    "category": "bakery"
-  },
-  {
-    "id": 908765,
-    "name": "Eggs",
-    "unit": "dozen",
-    "amount": 4,
-    "image": "http://linktoeggsimage.com",
-    "category": "poultry"
-  },
-  {
-    "id": 487654,
-    "name": "Apple",
-    "unit": "kg",
-    "amount": 10,
-    "image": "http://linktoappleimage.com",
-    "category": "fruit"
-  },
-  {
-    "id": 587965,
-    "name": "Carrot",
-    "unit": "bag",
-    "amount": 3,
-    "image": "http://linktocarrotimage.com",
-    "category": "vegetables"
-  },
-  {
-    "id": 698745,
-    "name": "Milk",
-    "unit": "liter",
-    "amount": 2,
-    "image": "http://linktomilkimage.com",
-    "category": "dairy"
-  },
-  {
-    "id": 798132,
-    "name": "Bread",
-    "unit": "loaf",
-    "amount": 1,
-    "image": "http://linktobreadimage.com",
-    "category": "bakery"
-  },
-  {
-    "id": 908765,
-    "name": "Eggs",
-    "unit": "dozen",
-    "amount": 4,
-    "image": "http://linktoeggsimage.com",
-    "category": "poultry"
-  }
-
-].map((item) => ({...item, "selected": false, "image": sampleGroceries})) 
-
-
-
 
 
 
@@ -107,45 +21,76 @@ const Home = () => {
 
   const [search, setSearch] = useState("");
   const [haveSearched, setHaveSearch] = useState([]);
+
+  // for pagination
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(Math.ceil(haveSearched.length/itemsPerPage));
+  const [currentItems, setCurrentItems] = useState([]);
+  //
+
+  // for session cart: items that are selected at the moment
+  const [sessionCart, setSessionCart] = useState([]);
+  //
+
+  // for calculated carts: storing calculated carts returned from the api
+  const [calculateCarts, setCalculateCarts] = useState([]);
+  const [showCalculateCarts, setShowCalculateCarts] = useState(false);
+  //
 
 
   useEffect(() => {
     setTotalPage(Math.ceil(haveSearched.length / itemsPerPage));
   }, [haveSearched]);
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = haveSearched.slice(indexOfFirstItem, indexOfLastItem);
+  useEffect(() => {
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const newCurrentItems = haveSearched.slice(indexOfFirstItem, indexOfLastItem);
+    setCurrentItems(newCurrentItems);
+  }, [currentPage, haveSearched]);
+
 
   const toggleItemSelection = (ind) => {
     const newItems = [...haveSearched];
     newItems[ind].selected = !newItems[ind].selected;
     setHaveSearch(newItems);
+    const newSessionCart = [...sessionCart];
+    if (newItems[ind].selected) {
+      const existed = newSessionCart.find((item) => item.id === newItems[ind].id);
+      if (existed) return;
+      newSessionCart.push(newItems[ind]);
+    } else {
+      const index = newSessionCart.findIndex((item) => item.id === newItems[ind].id);
+      newSessionCart.splice(index, 1);
+    }
+    setSessionCart(newSessionCart);
   }
+  
 
-  const searchItem = () => {
-    setHaveSearch([...sampleItems]);
-    axios.get("/api/itemSearch", {
-      params: {
-        searchTerm: search,
-      }
-    })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-    console.log(search);
-    //remember to map the item to have a selected propertys
-    // To do
-  }
+
+  // handle searching and switching UI
+  const searchItem = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.get(`/itemSearch?searchTerm=${search}`);
+      const innerData = res.data[0]; // Accessing the first element which is the actual array of items
+      const mappedData = innerData.map((item) => ({
+        ...item,
+        "selected": false,
+        "image": sampleGroceries,
+      }));
+      console.log(mappedData);
+      setHaveSearch(mappedData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
 
   return (
-        haveSearched.length===0 ? (
+      <>
+        {haveSearched.length===0 ? (
           <>
             <div className="home">
                 <div className="home-logo">
@@ -216,15 +161,14 @@ const Home = () => {
               </div>
             </div>
             <div className="current-cart">
-                <ShowCart/>
+                <ShowCart sessionCart = {sessionCart} setSessionCart={setSessionCart} setShowCalculateCarts={setShowCalculateCarts} setCalculateCarts={setCalculateCarts}/>
             </div>
           </div>
 
           </>
-        )
-      
-    
-
+        )}
+        {showCalculateCarts && <GetCarts calculateCarts={calculateCarts} setCalculateCarts={setCalculateCarts} setShowCalculateCarts={setShowCalculateCarts}/>}
+      </>
   );
 }
 
