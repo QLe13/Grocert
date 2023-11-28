@@ -6,6 +6,14 @@ import play.api.mvc._
 import java.lang.ProcessBuilder.Redirect
 import  play.api.libs.json._
 
+import play.api.db.slick.DatabaseConfigProvider
+import scala.concurrent.ExecutionContext
+import play.api.db.slick.HasDatabaseConfigProvider
+import slick.jdbc.JdbcProfile
+import slick.jdbc.PostgresProfile.api._
+import scala.concurrent.Future
+import models._
+
 case class Item(id: Int, name: String, unit: String, amount: Int, image: String, category: String)
 case class ItemAndCost(item: Item, cost: Int)
 case class StoreCalculation(storeId: Int, storeName: String, totalCost: Double, cart: List[ItemAndCost])
@@ -13,7 +21,8 @@ case class ItemSearchRequest(searchTerm: String)
 case class CalculateCartRequest(zipCode: Int, itemIds: List[Int])
 
 @Singleton
-class ApiController @Inject()(cc: ControllerComponents) extends AbstractController(cc){
+class ApiController @Inject()(protected val dbConfigProvider: DatabaseConfigProvider, cc: ControllerComponents)(implicit ec: ExecutionContext) 
+  extends AbstractController(cc) with HasDatabaseConfigProvider[JdbcProfile] {
   implicit val itemReads: play.api.libs.json.Reads[controllers.Item] = Json.reads[Item]
   implicit val itemWrites: play.api.libs.json.OWrites[controllers.Item]= Json.writes[Item]
   implicit val itemAndCostReads: play.api.libs.json.Reads[controllers.ItemAndCost]= Json.reads[ItemAndCost]
@@ -22,7 +31,7 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
   implicit val storeCalculationWrites: play.api.libs.json.OWrites[controllers.StoreCalculation]= Json.writes[StoreCalculation]
   implicit val itemSearchRequestReads: play.api.libs.json.Reads[controllers.ItemSearchRequest]= Json.reads[ItemSearchRequest]
   implicit val calculateCartRequestReads: play.api.libs.json.Reads[controllers.CalculateCartRequest]= Json.reads[CalculateCartRequest]
-
+  private val model = new GroceryModel(db)
 
   def withJsonBody[A](f: A => Result)(implicit request: Request[AnyContent], reads: Reads[A]) = {
     request.body.asJson.map { body => 
@@ -35,8 +44,11 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
     }.getOrElse(BadRequest("Bad request"))
   }
   
-  def itemSearch(searchTerm: String) = Action { implicit request =>
-    Ok(Json.toJson(List(ExampleObjects.exampleItems)))
+  def itemSearch(searchTerm: String) = Action.async { implicit request =>
+    model.itemSearchByName(searchTerm).map { items =>
+      Ok(Json.toJson(items))
+    }
+    //Ok(Json.toJson(List(ExampleObjects.exampleItems)))
   }
 
   def calculateCart = Action { implicit request =>
