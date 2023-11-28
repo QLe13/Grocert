@@ -74,7 +74,7 @@ const Home = () => {
     e.preventDefault();
     try {
       const res = await axios.get(`/itemSearch?searchTerm=${search}`);
-      const innerData = res.data[0]; // Accessing the first element which is the actual array of items
+      const innerData = res.data; // Accessing the first element which is the actual array of items
       const mappedData = innerData.map((item) => ({
         ...item,
         "selected": false,
