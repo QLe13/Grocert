@@ -21,6 +21,7 @@ libraryDependencies ++= Seq(
   "org.mindrot" % "jbcrypt" % "0.4"
 )
 
+
 addCommandAlias(
   "validateCode",
   "scalafmtSbtCheck; scalafmtCheckAll; uiCodeStyleCheck"

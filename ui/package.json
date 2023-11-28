@@ -10,6 +10,10 @@
   },
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.18",
+    "axios": "^1.6.2",
     "kleur": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,9 +26,13 @@
     "rimraf": "^4.1.3"
   },
   "options": {
-    "allowedHosts": ["localhost", ".localhost"],
+    "allowedHosts": [
+      "localhost",
+      ".localhost"
+    ],
     "proxy": "https://localhost:9000/"
-    },
+  },
+  "_comment": "'proxy': 'https://localhost:9000/' is for production only. It is not used in dev.",
   "browserslist": {
     "production": [
       ">0.2%",
