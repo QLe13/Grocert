@@ -9,6 +9,9 @@ import controllers._
 
 class GroceryModel(db: Database)(implicit ec: ExecutionContext) {
   def itemSearchByName(searchTerm: String): Future[Seq[Item]] = {
+    if (searchTerm == "") {
+      return Future.successful(Seq[Item]())
+    }
     db.run(
       (for {
         prod <- Product if prod.name.toLowerCase like s"%${searchTerm.toLowerCase}%"
