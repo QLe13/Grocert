@@ -10,6 +10,8 @@ target
 .bsp
 /.metals/
 /.vscode/
+sql/project/build.properties
+/project/.bloop
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,scala,metals,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,scala,metals,react

@@ -1,15 +1,17 @@
 import React from "react";
 import "./SearchBar.css";
 
+
 const SearchBar = (props) => {
     return (
-        <div className="search-bar">
+        <form className="search-bar" onSubmit={props.searchItem}>
             <input
                 type="text"
                 placeholder="Search your item..."
+                onChange={(e) => props.setSearch(e.target.value)}
             />
-            <button className="search-icon">🔍</button>
-        </div>
+            <button type="submit" className="search-icon" onClick={props.searchItem}>🔍</button>
+        </form>
     );
 }
 

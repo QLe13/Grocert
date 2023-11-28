@@ -21,6 +21,8 @@ CREATE TABLE Has (
     FOREIGN KEY (store_id) REFERENCES Stores(store_id)
 );
 
-\copy Product(product_id, category, name) FROM 'products.csv' WITH CSV HEADER
+GRANT ALL ON ALL TABLES IN SCHEMA public to lmartin9;
+
+\copy Product(product_id, name, category) FROM 'products.csv' WITH CSV HEADER
 \copy Stores(store_id, product_ids, zip_code) FROM 'stores.csv' WITH CSV HEADER
 \copy Has(product_id, store_id, current_price, amount, units) FROM 'has.csv' WITH CSV HEADER
