@@ -198,7 +198,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/opt/homebrew/Cellar/openjdk/20.0.2/libexec/openjdk.jdk/Contents/Home",
+                "home": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
                 "options": [
                     "-Duser.dir=/Users/q/Grocery/project/project"
                 ]

@@ -136,6 +136,7 @@
     border-radius: 50%;
     background-color: #FFF7E1;
     cursor: pointer;
+    text-align: center;
 }
 .search-result-previous:hover {
     background-color: #E96A4D;
@@ -152,6 +153,7 @@
     border-radius: 50%;
     background-color: #FFF7E1;
     cursor: pointer;
+    text-align: center;
 }
 .search-result-next:hover {
     background-color: #E96A4D;
