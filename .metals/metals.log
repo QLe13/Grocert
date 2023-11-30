@@ -256,3 +256,157 @@ Caused by: java.nio.channels.AsynchronousCloseException
     "message": "No project associated with Uri(file:/Users/q/play-scala-react-seed/project/?id\u003dplay-scala-react-seed-build)"
   }
 }
+<<<<<<< Updated upstream
+=======
+Nov 03, 2023 12:32:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.11.03 13:08:08 INFO  compiling root-test (1 scala source)
+2023.11.03 13:08:10 INFO  time: compiled root-test in 2.59s
+2023.11.04 11:41:59 INFO  Shutting down server
+2023.11.04 11:41:59 INFO  shutting down Metals
+2023.11.04 11:42:00 INFO  Shut down connection with build server.
+2023.11.04 11:42:00 INFO  Shut down connection with build server.
+2023.11.04 11:42:00 INFO  Shut down connection with build server.
+2023.11.07 14:08:01 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.84.0.
+2023.11.07 14:08:02 INFO  Attempting to connect to the build server...
+2023.11.07 14:08:02 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.07 14:08:02 INFO  skipping build import with status 'Installed'
+2023.11.07 14:08:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.07 14:08:02 INFO  Attempting to connect to the build server...
+2023.11.07 14:08:02 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.07 14:08:02 INFO  Attempting to connect to the build server...
+2023.11.07 14:08:02 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.07 14:08:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.07 14:08:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.07 14:08:02 INFO  time: Connected to build server in 0.6s
+2023.11.07 14:08:02 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.07 14:08:06 INFO  time: indexed workspace in 3.49s
+2023.11.07 23:25:14 INFO  Shutting down server
+2023.11.07 23:25:14 INFO  shutting down Metals
+2023.11.07 23:25:14 INFO  Shut down connection with build server.
+2023.11.07 23:25:14 INFO  Shut down connection with build server.
+2023.11.07 23:25:14 INFO  Shut down connection with build server.
+2023.11.07 23:25:14 INFO  Exiting server
+2023.11.09 14:58:28 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.84.1.
+2023.11.09 14:58:28 INFO  Attempting to connect to the build server...
+2023.11.09 14:58:28 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.09 14:58:28 INFO  skipping build import with status 'Installed'
+2023.11.09 14:58:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.09 14:58:30 INFO  Attempting to connect to the build server...
+2023.11.09 14:58:30 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.09 14:58:30 INFO  Attempting to connect to the build server...
+2023.11.09 14:58:30 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.09 14:58:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.09 14:58:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.09 14:58:30 INFO  time: Connected to build server in 2s
+2023.11.09 14:58:30 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.09 14:58:32 INFO  time: indexed workspace in 2.18s
+2023.11.09 16:15:45 INFO  Shutting down server
+2023.11.09 16:15:45 INFO  shutting down Metals
+2023.11.09 16:15:45 INFO  Shut down connection with build server.
+2023.11.09 16:15:45 INFO  Shut down connection with build server.
+2023.11.09 16:15:45 INFO  Shut down connection with build server.
+2023.11.09 16:15:45 INFO  Exiting server
+2023.11.10 12:11:18 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.84.1.
+2023.11.10 12:11:18 INFO  Attempting to connect to the build server...
+2023.11.10 12:11:18 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.10 12:11:18 INFO  skipping build import with status 'Installed'
+2023.11.10 12:11:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.10 12:11:18 INFO  Attempting to connect to the build server...
+2023.11.10 12:11:18 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.10 12:11:18 INFO  Attempting to connect to the build server...
+2023.11.10 12:11:18 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.10 12:11:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.10 12:11:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.10 12:11:19 INFO  time: Connected to build server in 0.34s
+2023.11.10 12:11:19 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.10 12:11:21 INFO  time: indexed workspace in 2.12s
+2023.11.14 11:41:35 INFO  Shutting down server
+2023.11.14 11:41:35 INFO  shutting down Metals
+2023.11.14 11:41:36 INFO  Shut down connection with build server.
+2023.11.14 11:41:36 INFO  Shut down connection with build server.
+2023.11.14 11:41:36 INFO  Shut down connection with build server.
+2023.11.14 11:41:35 INFO  Exiting server
+2023.11.14 14:09:36 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.84.1.
+2023.11.14 14:09:36 INFO  Attempting to connect to the build server...
+2023.11.14 14:09:36 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.14 14:09:36 INFO  skipping build import with status 'Installed'
+2023.11.14 14:09:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.14 14:09:36 INFO  Attempting to connect to the build server...
+2023.11.14 14:09:36 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.14 14:09:36 INFO  Attempting to connect to the build server...
+2023.11.14 14:09:36 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.14 14:09:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.14 14:09:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.14 14:09:37 INFO  time: Connected to build server in 0.48s
+2023.11.14 14:09:37 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.14 14:09:39 INFO  time: indexed workspace in 2.15s
+2023.11.15 15:57:40 INFO  Shutting down server
+2023.11.15 15:57:40 INFO  shutting down Metals
+2023.11.15 15:57:41 INFO  Shut down connection with build server.
+2023.11.15 15:57:41 INFO  Shut down connection with build server.
+2023.11.15 15:57:41 INFO  Shut down connection with build server.
+2023.11.15 15:57:41 INFO  Exiting server
+2023.11.16 00:35:47 INFO  Started: Metals version 1.1.0 in folders '/Users/q/Grocery' for client Visual Studio Code 1.84.2.
+2023.11.16 00:35:48 INFO  Attempting to connect to the build server...
+2023.11.16 00:35:48 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.16 00:35:48 INFO  skipping build import with status 'Installed'
+2023.11.16 00:35:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.16 00:35:49 INFO  Attempting to connect to the build server...
+2023.11.16 00:35:49 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.16 00:35:49 INFO  Attempting to connect to the build server...
+2023.11.16 00:35:49 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/q/.bloop/bloop.json
+2023.11.16 00:35:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.16 00:35:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/q/Grocery/project/project/.metals/bsp.trace.json or /Users/q/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.16 00:35:49 INFO  time: Connected to build server in 1.41s
+2023.11.16 00:35:49 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.16 00:35:49 INFO  time: Imported build in 0.23s
+2023.11.16 00:35:52 INFO  time: indexed workspace in 2.75s
+2023.11.28 15:19:50 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\13236\Documents\GitHub\Grocery' for client Visual Studio Code 1.84.2.
+2023.11.28 15:19:52 INFO  Attempting to connect to the build server...
+2023.11.28 15:19:52 INFO  Bloop uses C:\Users\13236\.jabba\jdk\adopt@1.11.0-11 defined at C:\Users\13236\.bloop\bloop.json
+2023.11.28 15:20:04 ERROR Starting the bsp launcher for bloop...
+2023.11.28 15:20:04 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 35988'...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR Waiting for the bsp connection to come up...
+2023.11.28 15:20:04 ERROR error: The command bsp --protocol tcp --port 35988 returned with an error
+2023.11.28 15:20:04 ERROR > No server running at 127.0.0.1:8212, let's fire one...
+2023.11.28 15:20:04 ERROR > Resolving ch.epfl.scala:bloop-frontend_2.12:1.5.11...
+2023.11.28 15:20:04 ERROR > Starting bloop server at 127.0.0.1:8212...
+2023.11.28 15:20:04 ERROR > Attempting a connection to the server...
+2023.11.28 15:20:04 ERROR > Attempting a connection to the server...
+2023.11.28 15:20:04 ERROR > Attempting a connection to the server...
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.12\scala-compiler-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.12\scala-compiler-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.12\scala-reflect-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\jline\jline\3.22.0\jline-3.22.0.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.12\scala-reflect-2.13.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\org\jline\jline\3.22.0\jline-3.22.0.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[33m[W][0m Scala instance jar c:\Users\q\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar doesn't exist!
+2023.11.28 15:20:04 ERROR > [0m[31m[E][0m Failed to load project from c:\Users\13236\Documents\GitHub\Grocery\.bloop\root.json
+2023.11.28 15:20:04 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2023.11.28 15:20:04 ERROR Failed to connect with build server, no functionality will work.
+java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:92)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:119)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:500)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+Nov 30, 2023 2:19:42 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+>>>>>>> Stashed changes
