@@ -1,0 +1,130 @@
+.get-carts-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #B1D8B7;
+    width: 50dvw;
+    height: 60dvh;
+    position: fixed;
+    z-index: 1000;
+    left: 25%;
+    top: 16%;
+    border-radius: 20px;
+}
+.get-carts-header {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 10%;
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 10px;
+}
+.get-carts-title {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+
+.get-carts-header button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: x-large;
+    font-weight: bold;
+    height: 100%;
+}
+.get-carts-header button:hover {
+    color: #E96A4D; 
+    transition: 0.5s;
+}
+
+.get-carts-result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+.get-carts-store {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background-color: #FFF7E1;
+    margin: 0 5% 10px 5%;
+    border-radius: 10px;
+}
+
+.get-carts-store-small {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.get-carts-store-small-name {
+    font-weight: bold;
+    font-size: larger;
+    margin: 3%;
+}
+.get-carts-store-small-info {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    height: 100%;
+    align-items: center;
+}
+.get-carts-store-cost {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.get-carts-store-id {
+    margin-right: 5px;
+    color: grey;
+}
+
+.get-carts-store-small-info button {
+    background-color: #94C973;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    height: calc(100% + 10px);
+    border-radius: 10px;
+}
+.get-carts-store-small-info button:hover {
+    color: #E96A4D; 
+    transition: 0.5s;
+}
+
+.get-carts-store-cart {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 0;
+    overflow: hidden;
+}
+.get-carts-store-cart.active {
+    height: auto;
+}
+
+.get-carts-store-cart-item {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #A0AAB2;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5% 10px 5%;
+    padding: 5px;
+}
