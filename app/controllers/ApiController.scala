@@ -16,9 +16,10 @@ import models._
 
 case class Item(id: Int, name: String, unit: String, amount: Int, image: String, category: String)
 case class ItemAndCost(item: Item, cost: Int)
-case class StoreCalculation(storeId: Int, storeName: String, totalCost: Double, cart: List[ItemAndCost])
+case class StoreCalculation(storeId: Int, storeName: String, totalCost: Int, cart: List[ItemAndCost])
 case class ItemSearchRequest(searchTerm: String)
 case class CalculateCartRequest(zipCode: Int, itemIds: List[Int])
+case class Store(storeId: Int, storeName: String, zipCode: Int)
 
 @Singleton
 class ApiController @Inject()(protected val dbConfigProvider: DatabaseConfigProvider, cc: ControllerComponents)(implicit ec: ExecutionContext) 
@@ -33,28 +34,31 @@ class ApiController @Inject()(protected val dbConfigProvider: DatabaseConfigProv
   implicit val calculateCartRequestReads: play.api.libs.json.Reads[controllers.CalculateCartRequest]= Json.reads[CalculateCartRequest]
   private val model = new GroceryModel(db)
 
-  def withJsonBody[A](f: A => Result)(implicit request: Request[AnyContent], reads: Reads[A]) = {
+  def withJsonBody[A](f: A => Future[Result])(implicit request: Request[AnyContent], reads: Reads[A]): Future[Result] = {
     request.body.asJson.map { body => 
       Json.fromJson[A](body) match {
         case JsSuccess(a, path) => f(a)
         case e @ JsError(_) => 
           println(e)
-          BadRequest(e.toString())
-      }
-    }.getOrElse(BadRequest("Bad request"))
+          Future.successful(BadRequest(e.toString()))
+      }  
+    }.getOrElse(Future.successful(BadRequest("Bad request")))
   }
   
   def itemSearch(searchTerm: String) = Action.async { implicit request =>
     model.itemSearchByName(searchTerm).map { items =>
       Ok(Json.toJson(items))
     }
-    //Ok(Json.toJson(List(ExampleObjects.exampleItems)))
   }
 
-  def calculateCart = Action { implicit request =>
-    println(request.body)
+  def calculateCart = Action.async { implicit request =>
     withJsonBody[CalculateCartRequest] { req =>
-      Ok(Json.toJson(ExampleObjects.exampleCartCalculation))
+      val fStores = model.storeSearchByZip(req.zipCode)
+      fStores.flatMap { stores =>
+        model.calculateCart(stores, req.itemIds).map { res =>
+          Ok(Json.toJson(res))
+        }
+      }
     }
   }
 }
