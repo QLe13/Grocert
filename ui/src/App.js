@@ -11,6 +11,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import NavBar from "./components/NavBar/NavBar";
 import ShowCart from "./components/ShowCart/ShowCart";
 import GetCarts from "./components/GetCarts/GetCarts";
+import AboutUs from "./components/AboutUs/AboutUs";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
 import sampleGroceries from "./images/sampleGrocery.png";
@@ -263,6 +264,7 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="about" element={<AboutUs/>}/>
           </Routes>
         </div>
       </Router>

@@ -1,0 +1,24 @@
+
+.title {
+  color: lightgreen;
+  text-align: center;
+}
+
+.text-background {
+  background-color: #808080DD;
+  width: 90%;
+  border-radius: 30px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.about-us-text {
+  color: white;
+}
+
+.team-photo {
+  border-radius: 30px;
+  width: 400px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
