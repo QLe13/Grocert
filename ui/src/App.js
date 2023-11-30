@@ -27,7 +27,12 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(Math.ceil(haveSearched.length/itemsPerPage));
   const [currentItems, setCurrentItems] = useState([]);
-  //
+
+  // for pagination
+  const maxPagesOnScreen = 8;
+  const [firstPageOnScreen, setFirstPageOnScreen] = useState(1);
+
+
 
   // for session cart: items that are selected at the moment
   const [sessionCart, setSessionCart] = useState([]);
@@ -43,6 +48,7 @@ const Home = () => {
     setTotalPage(Math.ceil(haveSearched.length / itemsPerPage));
   }, [haveSearched]);
 
+
   useEffect(() => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -50,28 +56,71 @@ const Home = () => {
     setCurrentItems(newCurrentItems);
   }, [currentPage, haveSearched]);
 
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      const newCurrentPage = currentPage - 1;
+      if (newCurrentPage < firstPageOnScreen) {
+        setFirstPageOnScreen(Math.max(1, newCurrentPage - maxPagesOnScreen + 1));
+      }
+      setCurrentPage(newCurrentPage);
+    }
+  };
+  const handlePreviousPageRange = () => {
+    if (firstPageOnScreen > 1) {
+      const newFirstPageOnScreen = Math.max(1, firstPageOnScreen - maxPagesOnScreen);
+      setFirstPageOnScreen(newFirstPageOnScreen);
+      setCurrentPage(newFirstPageOnScreen);
+    }
+  };
+  const handleNextPageRange = () => {
+    if (firstPageOnScreen + maxPagesOnScreen - 1 < totalPage) {
+      const newFirstPageOnScreen = firstPageOnScreen + maxPagesOnScreen;
+      setFirstPageOnScreen(newFirstPageOnScreen);
+      setCurrentPage(newFirstPageOnScreen);
+    }
+  };
+
+  
+  const handleNextPage = () => {
+    if (currentPage < totalPage) {
+      const newCurrentPage = currentPage + 1;
+      if (newCurrentPage > firstPageOnScreen + maxPagesOnScreen - 1) {
+        setFirstPageOnScreen(newCurrentPage);
+      }
+      setCurrentPage(newCurrentPage);
+    }
+  };
+  
+  
+  
+
 
   const toggleItemSelection = (ind) => {
+    // Calculate the actual index in the haveSearched array
+    const actualIndex = (currentPage - 1) * itemsPerPage + ind;
+  
     const newItems = [...haveSearched];
-    newItems[ind].selected = !newItems[ind].selected;
+    newItems[actualIndex].selected = !newItems[actualIndex].selected;
     setHaveSearch(newItems);
+  
     const newSessionCart = [...sessionCart];
-    if (newItems[ind].selected) {
-      const existed = newSessionCart.find((item) => item.id === newItems[ind].id);
+    if (newItems[actualIndex].selected) {
+      const existed = newSessionCart.find((item) => item.id === newItems[actualIndex].id);
       if (existed) return;
-      newSessionCart.push(newItems[ind]);
+      newSessionCart.push(newItems[actualIndex]);
     } else {
-      const index = newSessionCart.findIndex((item) => item.id === newItems[ind].id);
+      const index = newSessionCart.findIndex((item) => item.id === newItems[actualIndex].id);
       newSessionCart.splice(index, 1);
     }
     setSessionCart(newSessionCart);
   }
   
+  
 
 
   // handle searching and switching UI
   const searchItem = async (e) => {
-    e.preventDefault();
+    e.preventDefault();// prevent page from refreshing
     try {
       const res = await axios.get(`/itemSearch?searchTerm=${search}`);
       const innerData = res.data; // Accessing the first element which is the actual array of items
@@ -80,8 +129,11 @@ const Home = () => {
         "selected": false,
         "image": sampleGroceries,
       }));
-      console.log(mappedData);
+      //reset session cart
       setHaveSearch(mappedData);
+      //reset pagination
+      setCurrentPage(1);
+      setFirstPageOnScreen(1);
     } catch (err) {
       console.log(err);
     }
@@ -112,7 +164,10 @@ const Home = () => {
                 <div className="search-result">
                   {
                     currentItems.map((item, ind) => (
-                      <div className="search-result-item">
+                      <div 
+                        className="search-result-item"
+                        key={item.id}
+                        >
                         <div className="search-result-item-inner"
                         style={
                                 {
@@ -134,29 +189,42 @@ const Home = () => {
                   }
                 </div>
                 <div className="search-result-pagination">
-                  <div className="search-result-previous">
-                    <div className="search-result-previous-text" onClick={()=>
-                      {
-                        if(currentPage>1){
-                          setCurrentPage(currentPage-1)
-                        }
-                      }
-                    }>&#8249;</div>
+                  <div className="search-result-previous" onClick={handlePreviousPageRange}>
+                      <div className="search-result-previous-text" 
+                      >&#8249;&#8249;</div>
                   </div>
+                  <div className="search-result-previous" onClick={handlePreviousPage}>
+                    <div className="search-result-previous-text">&#8249;</div>
+                  </div>
+                  {
+                    firstPageOnScreen > 1 && <div className="search-result-pagination-item">...</div>
+                  }
                     {
-                      Array(totalPage).fill(0).map((_, index) => (
-                        <div className="search-result-pagination-item" onClick={() => setCurrentPage(index + 1)}>{index + 1}</div>
+                      Array.from({length: (firstPageOnScreen+ maxPagesOnScreen <= totalPage)? maxPagesOnScreen : totalPage - firstPageOnScreen + 1 }, 
+                      (_, i) => i + firstPageOnScreen).map((_, index) => (
+                        <div 
+                          key={firstPageOnScreen + index}
+                          className="search-result-pagination-item" 
+                          style={
+                            {
+                              backgroundColor: currentPage === firstPageOnScreen + index ? "#B1D8B7" : "#FFF7E1",
+                            }
+                          }
+                          onClick={() => setCurrentPage(firstPageOnScreen+ index)}>{firstPageOnScreen+ index}
+                        </div>
                       ))
                     }
-                  <div className="search-result-next">
-                      <div className="search-result-next-text" onClick={() => {
-                        if (currentPage < totalPage) {
-                          setCurrentPage(currentPage + 1)
-                        }
-                      }
-                      }>&#8250;
+                  {
+                    firstPageOnScreen + maxPagesOnScreen - 1 < totalPage && <div className="search-result-pagination-item">...</div>
+                  }
+                  <div className="search-result-next" onClick={handleNextPage}>
+                      <div className="search-result-next-text">&#8250;</div>
+                  </div>
+                  <div className="search-result-next" onClick={handleNextPageRange}>
+                      <div className="search-result-next-text">
+                        &#8250;&#8250;
                       </div>
-                   </div>
+                  </div>
                 </div>
               </div>
             </div>
