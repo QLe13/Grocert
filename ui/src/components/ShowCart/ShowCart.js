@@ -39,7 +39,10 @@ const ShowCart = (props) => {
             <div className="show-cart-items">
                 {props.sessionCart.map((item, ind) => {
                     return (
-                        <div className="show-cart-item-info">
+                        <div 
+                        className="show-cart-item-info"
+                        key={ind}
+                        >
                             <div className="show-cart-item-name">{item.name}</div>
                             <div className="show-cart-item-remove" 
                                  onClick={() => toggleRemoveItem(ind)}>-</div>
