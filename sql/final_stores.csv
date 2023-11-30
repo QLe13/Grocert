@@ -1,0 +1,1280 @@
+store_id,zip_code,store_name
+1,10001,Walmart
+2,10001,Kroger
+3,10001,Costco
+4,10001,Albertsons
+5,10001,Publix
+6,10001,Aldi
+7,10001,Albertsons
+8,10001,Whole Foods
+9,10001,Trader Joe's
+10,10001,Safeway
+11,10001,WinCo
+12,10001,Hy-Vee
+13,10001,WinCo
+14,10001,Meijer
+15,10001,Safeway
+16,10001,H-E-B
+17,10001,Hannaford
+18,10001,Meijer
+19,10001,Sprouts
+20,10001,Giant Eagle
+21,10001,Stop & Shop
+22,10001,Walmart
+23,10001,Wegmans
+24,10001,Food Lion
+25,10001,ShopRite
+26,10001,Walmart 2
+27,10001,Hy-Vee
+28,10001,Hannaford
+29,10001,Kroger 2
+30,10001,Costco 2
+31,10001,Albertsons 2
+32,10001,Publix 2
+33,10001,Walmart
+34,10001,Aldi 2
+35,10001,Publix
+36,10001,Trader Joe's
+37,10001,Whole Foods 2
+38,10001,Albertsons
+39,10001,Trader Joe's 2
+40,10001,Meijer
+41,10001,Safeway 2
+42,10002,WinCo 2
+43,10002,Kroger
+44,10002,Walmart
+45,10002,Hy-Vee 2
+46,10002,Meijer
+47,10002,Meijer 2
+48,10002,H-E-B 2
+49,10002,Hannaford 2
+50,10002,H-E-B
+51,10002,H-E-B 2
+52,10002,Kroger 2
+53,10002,Publix
+54,10002,Whole Foods 2
+55,10002,WinCo
+56,10002,Sprouts 2
+57,10002,Hannaford 2
+58,10002,Meijer 2
+59,10002,Giant Eagle 2
+60,10002,Albertsons
+61,10002,Aldi
+62,10002,Stop & Shop 2
+63,10002,ShopRite
+64,10002,WinCo 2
+65,10002,Publix
+66,10002,Giant Eagle
+67,10002,Trader Joe's 2
+68,10002,Wegmans 2
+69,10002,Hannaford 2
+70,10002,Food Lion 2
+71,10002,H-E-B
+72,10002,Meijer 2
+73,10002,ShopRite
+74,10002,ShopRite 2
+75,10002,Safeway 2
+76,10002,Walmart 2
+77,10002,Whole Foods 2
+78,10002,Sprouts 2
+79,10002,Hy-Vee
+80,10002,Costco
+81,10002,Publix 2
+82,10002,Publix 2
+83,10002,WinCo
+84,10002,Whole Foods 2
+85,10002,Aldi 2
+86,10002,Walmart 3
+87,10002,Food Lion
+88,10003,Kroger 2
+89,10003,Kroger 2
+90,10003,Kroger
+91,10004,Kroger 3
+92,10004,Aldi
+93,10004,Food Lion
+94,10004,Albertsons
+95,10004,Walmart
+96,10004,Walmart 3
+97,10004,Kroger 3
+98,10004,Stop & Shop
+99,10004,H-E-B
+100,10004,WinCo 2
+101,10004,Stop & Shop 2
+102,10004,Costco 3
+103,10004,Walmart
+104,10004,Publix 2
+105,10005,Kroger 2
+106,10005,Albertsons 3
+107,10005,Aldi
+108,10005,Kroger
+109,10005,Publix 2
+110,10005,Publix 3
+111,10005,ShopRite
+112,10005,Aldi 3
+113,10005,Wegmans 2
+114,10005,WinCo
+115,10005,Meijer 2
+116,10005,Stop & Shop 2
+117,10005,Whole Foods 3
+118,10005,Kroger 2
+119,10005,Hy-Vee
+120,10005,ShopRite 2
+121,10005,H-E-B
+122,10005,Meijer 2
+123,10005,WinCo 2
+124,10005,Stop & Shop
+125,10005,Stop & Shop
+126,10005,Aldi 3
+127,10005,Hy-Vee
+128,10005,Costco 2
+129,10005,H-E-B
+130,10005,Whole Foods 3
+131,10005,Giant Eagle
+132,10005,Costco 2
+133,10005,Hy-Vee 2
+134,10005,ShopRite 2
+135,10005,Hannaford
+136,10005,Publix
+137,10005,Meijer 2
+138,10005,Publix 2
+139,10005,Wegmans
+140,10005,Hy-Vee
+141,10005,Publix
+142,10005,Publix 2
+143,10005,Costco 2
+144,10005,Food Lion 2
+145,10005,Giant Eagle 2
+146,10005,Costco
+147,10006,ShopRite 2
+148,10006,Hy-Vee 2
+149,10006,Walmart 3
+150,10006,Trader Joe's 3
+151,10006,Hannaford 2
+152,10006,Safeway 3
+153,10006,Stop & Shop 2
+154,10006,Stop & Shop 2
+155,10006,Costco
+156,10006,WinCo
+157,10006,Safeway
+158,10006,Wegmans 2
+159,10006,WinCo
+160,10006,Hannaford 2
+161,10006,Kroger 3
+162,10006,Costco
+163,10006,Meijer
+164,10006,Kroger 3
+165,10006,Aldi 2
+166,10006,Kroger
+167,10006,Wegmans
+168,10006,Walmart 2
+169,10006,Meijer 2
+170,10006,Kroger
+171,10006,H-E-B 2
+172,10006,Whole Foods 2
+173,10006,Aldi 2
+174,10006,Wegmans
+175,10006,Publix 3
+176,10006,Costco 3
+177,10006,Hannaford 2
+178,10006,Costco
+179,10006,Hannaford 2
+180,10006,Walmart 2
+181,10006,Food Lion 2
+182,10006,H-E-B
+183,10006,Costco 3
+184,10007,Publix 2
+185,10007,H-E-B 2
+186,10007,Wegmans 2
+187,10007,Whole Foods 2
+188,10007,Food Lion 2
+189,10007,Publix
+190,10007,Giant Eagle 2
+191,10007,Food Lion
+192,10007,H-E-B 2
+193,10007,H-E-B
+194,10007,WinCo 3
+195,10007,Trader Joe's 2
+196,10007,Safeway 3
+197,10007,Kroger
+198,10007,Trader Joe's
+199,10007,Wegmans 2
+200,10007,Sprouts
+201,10007,WinCo 2
+202,10007,H-E-B
+203,10007,Costco 2
+204,10007,Aldi 2
+205,10007,H-E-B 2
+206,10007,Whole Foods
+207,10007,Whole Foods 3
+208,10007,Costco
+209,10007,Publix 2
+210,10007,Publix 3
+211,10007,H-E-B
+212,10007,WinCo 2
+213,10007,Hannaford 2
+214,10007,Aldi
+215,10007,H-E-B 2
+216,10008,Whole Foods 3
+217,10008,Kroger
+218,10008,Walmart 2
+219,10008,ShopRite
+220,10008,Publix 3
+221,10008,Hannaford 2
+222,10008,Hannaford 2
+223,10008,Food Lion 2
+224,10008,ShopRite 2
+225,10008,Walmart 3
+226,10008,Kroger 3
+227,10008,Whole Foods
+228,10008,Walmart
+229,10008,Costco
+230,10008,Wegmans
+231,10008,Albertsons
+232,10008,Safeway
+233,10008,Publix 3
+234,10008,Trader Joe's 3
+235,10008,Kroger 3
+236,10008,Walmart 2
+237,10008,Kroger 2
+238,10008,Publix 2
+239,10008,Whole Foods
+240,10008,Walmart 3
+241,10008,Stop & Shop 2
+242,10008,Aldi 3
+243,10008,Kroger 3
+244,10008,Albertsons 2
+245,10008,H-E-B
+246,10008,Kroger 2
+247,10008,WinCo
+248,10008,Walmart 2
+249,10008,Albertsons
+250,10008,Costco 3
+251,10008,Albertsons 3
+252,10008,WinCo
+253,10008,Sprouts 2
+254,10008,Kroger 2
+255,10008,Stop & Shop
+256,10008,Meijer
+257,10008,H-E-B 2
+258,10008,Whole Foods 3
+259,10008,Food Lion
+260,10009,Wegmans
+261,10009,Hy-Vee
+262,10009,Food Lion
+263,10009,Stop & Shop
+264,10009,Costco 3
+265,10010,Giant Eagle
+266,10010,Stop & Shop 2
+267,10010,Walmart 3
+268,10010,Hannaford
+269,10010,WinCo
+270,10010,Wegmans
+271,10010,WinCo 3
+272,10010,Food Lion 2
+273,10010,Walmart 3
+274,10010,Trader Joe's
+275,10010,Sprouts 2
+276,10010,Aldi 3
+277,10010,Kroger
+278,10010,H-E-B
+279,10010,Aldi 2
+280,10011,Albertsons
+281,10011,Aldi
+282,10011,Giant Eagle 2
+283,10011,WinCo 2
+284,10011,Safeway
+285,10011,Wegmans 2
+286,10011,Aldi 3
+287,10011,Safeway
+288,10011,Safeway 2
+289,10011,Publix 3
+290,10011,Albertsons 3
+291,10011,Trader Joe's 2
+292,10011,Safeway 3
+293,10011,Hannaford 2
+294,10011,Publix 3
+295,10011,ShopRite 2
+296,10011,Whole Foods 2
+297,10011,Safeway
+298,10011,H-E-B
+299,10011,Aldi 3
+300,10011,Albertsons
+301,10011,Whole Foods
+302,10011,Walmart 2
+303,10011,WinCo 3
+304,10011,ShopRite 2
+305,10011,Food Lion
+306,10011,Food Lion 2
+307,10012,Wegmans
+308,10012,Walmart
+309,10012,Aldi
+310,10012,Kroger 2
+311,10012,Sprouts
+312,10012,WinCo
+313,10012,Walmart 2
+314,10012,Walmart 3
+315,10012,Sprouts 2
+316,10012,Whole Foods 3
+317,10012,Wegmans
+318,10012,Food Lion
+319,10012,H-E-B
+320,10012,Kroger 3
+321,10012,Aldi 3
+322,10012,WinCo
+323,10012,Whole Foods 3
+324,10012,Sprouts
+325,10012,H-E-B 2
+326,10012,Albertsons 2
+327,10012,Costco
+328,10012,Giant Eagle 2
+329,10012,Kroger
+330,10012,Food Lion
+331,10012,WinCo
+332,10013,Walmart
+333,10013,Sprouts 2
+334,10013,Sprouts
+335,10013,Walmart
+336,10013,Walmart
+337,10013,H-E-B
+338,10014,Kroger
+339,10014,Aldi 3
+340,10014,Walmart 3
+341,10014,Kroger
+342,10014,H-E-B
+343,10014,ShopRite 2
+344,10014,Costco
+345,10014,Aldi 3
+346,10014,H-E-B 2
+347,10014,Meijer
+348,10014,Whole Foods
+349,10014,Albertsons 2
+350,10014,Trader Joe's 2
+351,10014,WinCo 3
+352,10014,Trader Joe's 2
+353,10014,Walmart 3
+354,10014,Stop & Shop
+355,10014,Kroger 2
+356,10014,Sprouts 2
+357,10014,Whole Foods 2
+358,10014,Walmart
+359,10014,Wegmans 2
+360,10014,Trader Joe's 2
+361,10014,Hannaford
+362,10015,Albertsons 3
+363,10015,Aldi 2
+364,10015,Costco 2
+365,10015,Whole Foods
+366,10015,Meijer 2
+367,10015,Wegmans 2
+368,10015,Hannaford
+369,10015,Publix
+370,10015,Walmart
+371,10015,ShopRite 2
+372,10015,Aldi 3
+373,10015,Trader Joe's 2
+374,10015,Trader Joe's 2
+375,10015,Costco 2
+376,10015,Costco 2
+377,10015,Aldi 2
+378,10015,Whole Foods
+379,10015,Walmart 2
+380,10015,Aldi 3
+381,10015,Hy-Vee 2
+382,10015,WinCo 3
+383,10015,Stop & Shop
+384,10015,Whole Foods 2
+385,10015,WinCo 3
+386,10015,Food Lion 2
+387,10015,Safeway 3
+388,10015,Albertsons 3
+389,10015,Giant Eagle
+390,10015,Walmart
+391,10015,Sprouts
+392,10015,Meijer 2
+393,10015,Giant Eagle
+394,10015,ShopRite 2
+395,10015,Hy-Vee
+396,10015,Giant Eagle
+397,10015,Trader Joe's 2
+398,10015,Hy-Vee 2
+399,10015,Wegmans
+400,10016,Albertsons 3
+401,10016,Costco 3
+402,10016,Wegmans 2
+403,10016,Aldi
+404,10016,Sprouts 2
+405,10016,Hannaford
+406,10016,Safeway
+407,10016,Safeway 3
+408,10016,Hannaford 2
+409,10016,Trader Joe's 3
+410,10016,Aldi
+411,10016,Publix 3
+412,10016,Aldi 3
+413,10016,Sprouts 2
+414,10016,Hy-Vee 2
+415,10016,Stop & Shop
+416,10016,Trader Joe's
+417,10016,WinCo 2
+418,10016,Trader Joe's
+419,10016,Aldi
+420,10016,Stop & Shop 2
+421,10016,Hy-Vee
+422,10016,Walmart 2
+423,10016,Aldi 3
+424,10016,Walmart
+425,10016,Albertsons 2
+426,10016,Whole Foods 2
+427,10016,Publix 3
+428,10016,Costco 3
+429,10016,Hy-Vee
+430,10016,Hannaford
+431,10016,Trader Joe's 2
+432,10016,Aldi 3
+433,10016,Publix
+434,10016,Kroger 2
+435,10016,Albertsons
+436,10016,Hannaford
+437,10016,Wegmans 2
+438,10016,Albertsons
+439,10016,Hy-Vee
+440,10016,Trader Joe's 2
+441,10016,Wegmans
+442,10016,Whole Foods 3
+443,10016,Safeway 2
+444,10016,Costco 3
+445,10016,Hannaford
+446,10016,Kroger 3
+447,10016,Aldi 2
+448,10016,Giant Eagle
+449,10017,Walmart
+450,10017,ShopRite 2
+451,10017,WinCo 2
+452,10017,ShopRite 2
+453,10017,Safeway 2
+454,10017,Hy-Vee 2
+455,10017,Sprouts 2
+456,10017,Albertsons
+457,10017,Costco 2
+458,10017,Whole Foods 2
+459,10017,Walmart 3
+460,10017,Kroger 3
+461,10017,Whole Foods 3
+462,10017,ShopRite 2
+463,10017,Publix
+464,10017,Aldi 2
+465,10017,Walmart
+466,10017,Albertsons 3
+467,10017,Costco
+468,10017,Kroger 2
+469,10017,Safeway 3
+470,10017,Giant Eagle
+471,10017,ShopRite 2
+472,10017,Albertsons 2
+473,10017,Publix 3
+474,10017,Whole Foods 2
+475,10017,Meijer
+476,10017,Albertsons 3
+477,10017,Hannaford
+478,10017,Walmart
+479,10017,Wegmans 2
+480,10017,Hannaford 2
+481,10017,Trader Joe's
+482,10017,ShopRite
+483,10017,Sprouts
+484,10018,ShopRite
+485,10018,Giant Eagle
+486,10019,Food Lion
+487,10019,Aldi 2
+488,10019,Hy-Vee 2
+489,10019,Aldi 3
+490,10019,Meijer
+491,10019,Kroger 3
+492,10019,Kroger
+493,10019,Safeway
+494,10019,Kroger 3
+495,10019,WinCo
+496,10019,Albertsons 3
+497,10019,Trader Joe's 3
+498,10019,Albertsons 2
+499,10019,Costco 2
+500,10019,Costco
+501,10019,Walmart 3
+502,10019,Hy-Vee 2
+503,10019,Trader Joe's 2
+504,10019,Publix 2
+505,10020,Food Lion
+506,10020,Publix 3
+507,10020,Stop & Shop 2
+508,10020,Stop & Shop
+509,10020,H-E-B
+510,10020,Publix 3
+511,10020,Giant Eagle 2
+512,10020,Meijer 2
+513,10020,Aldi 3
+514,10020,Meijer 2
+515,10020,Hy-Vee
+516,10021,Costco 2
+517,10021,Costco 3
+518,10021,Whole Foods 2
+519,10021,Costco 2
+520,10021,Hannaford
+521,10021,Stop & Shop
+522,10021,Food Lion
+523,10021,Walmart 2
+524,10021,ShopRite 2
+525,10021,Food Lion
+526,10021,WinCo 3
+527,10021,Albertsons 2
+528,10021,Albertsons 2
+529,10021,Hy-Vee 2
+530,10021,Publix 3
+531,10021,Hy-Vee 2
+532,10021,H-E-B
+533,10021,Costco
+534,10021,Sprouts 2
+535,10021,Giant Eagle 2
+536,10022,Wegmans 2
+537,10022,Publix
+538,10022,Albertsons 2
+539,10022,Safeway 3
+540,10022,Albertsons 2
+541,10022,Meijer
+542,10022,Wegmans 2
+543,10022,Walmart 3
+544,10022,ShopRite 2
+545,10022,Albertsons 2
+546,10023,Hy-Vee 2
+547,10023,Costco 2
+548,10023,ShopRite
+549,10023,Kroger
+550,10023,Walmart 2
+551,10023,Whole Foods 2
+552,10023,Safeway
+553,10023,Hannaford
+554,10023,Food Lion
+555,10023,Publix 2
+556,10023,Kroger
+557,10023,Costco
+558,10023,Kroger 2
+559,10023,Wegmans 2
+560,10023,Publix 2
+561,10023,Sprouts
+562,10023,Stop & Shop 2
+563,10023,Albertsons 3
+564,10023,WinCo 3
+565,10023,Trader Joe's 2
+566,10023,Giant Eagle 2
+567,10023,Sprouts 2
+568,10023,Hy-Vee
+569,10023,Kroger
+570,10023,Costco 2
+571,10023,Kroger 2
+572,10023,Hy-Vee
+573,10023,Hannaford
+574,10023,Whole Foods 2
+575,10023,Wegmans 2
+576,10023,Publix
+577,10023,Sprouts
+578,10023,Sprouts 2
+579,10023,Trader Joe's 3
+580,10023,Albertsons 3
+581,10023,WinCo 2
+582,10023,Whole Foods
+583,10023,Whole Foods 3
+584,10023,Trader Joe's
+585,10023,Wegmans 2
+586,10023,ShopRite 2
+587,10023,Costco 2
+588,10024,Trader Joe's 2
+589,10024,Sprouts
+590,10024,Hannaford 2
+591,10024,Stop & Shop
+592,10024,Whole Foods 2
+593,10024,Walmart
+594,10024,WinCo
+595,10024,Safeway 2
+596,10024,Whole Foods 2
+597,10024,Trader Joe's 3
+598,10024,Aldi
+599,10024,Walmart 3
+600,10024,Wegmans 2
+601,10024,Kroger
+602,10024,ShopRite
+603,10024,Hy-Vee
+604,10024,Costco 2
+605,10024,Hannaford
+606,10024,Aldi 3
+607,10024,Costco 2
+608,10024,Food Lion 2
+609,10024,Publix 2
+610,10024,ShopRite
+611,10024,Stop & Shop
+612,10024,H-E-B
+613,10024,Kroger 2
+614,10024,Giant Eagle 2
+615,10024,Safeway
+616,10024,Albertsons
+617,10024,WinCo 3
+618,10024,WinCo
+619,10024,Walmart
+620,10024,Costco 2
+621,10024,Albertsons
+622,10024,Hannaford 2
+623,10024,Hannaford
+624,10024,Kroger
+625,10024,Hy-Vee
+626,10024,Stop & Shop 2
+627,10024,Whole Foods
+628,10024,Sprouts 2
+629,10024,Whole Foods
+630,10024,Costco
+631,10024,Food Lion 2
+632,10025,Safeway 3
+633,10025,Wegmans 2
+634,10025,Albertsons 2
+635,10025,Safeway 3
+636,10025,Food Lion 2
+637,10025,Trader Joe's 3
+638,10025,Meijer 2
+639,10025,Trader Joe's
+640,10025,Hy-Vee 2
+641,10025,Publix
+642,10026,Giant Eagle 2
+643,10026,Albertsons
+644,10026,Trader Joe's
+645,10026,Food Lion
+646,10026,Aldi 2
+647,10026,Safeway
+648,10026,Hannaford 2
+649,10026,Giant Eagle 2
+650,10026,Hy-Vee
+651,10026,Whole Foods
+652,10027,Costco 3
+653,10027,Safeway
+654,10027,Whole Foods 3
+655,10027,Safeway 2
+656,10027,H-E-B 2
+657,10027,Wegmans
+658,10027,Trader Joe's 2
+659,10027,Costco
+660,10027,Meijer
+661,10027,ShopRite
+662,10027,Safeway 3
+663,10027,Kroger 3
+664,10027,Safeway
+665,10027,Publix 3
+666,10027,Walmart 3
+667,10027,H-E-B
+668,10027,Aldi 3
+669,10027,Kroger
+670,10027,WinCo
+671,10027,Albertsons 2
+672,10027,Walmart 3
+673,10027,Publix 3
+674,10027,ShopRite
+675,10027,Stop & Shop
+676,10027,Costco 3
+677,10027,Albertsons
+678,10027,Costco 3
+679,10027,Hannaford
+680,10027,ShopRite
+681,10027,Hannaford 2
+682,10027,Costco
+683,10027,WinCo 2
+684,10028,Trader Joe's 3
+685,10028,Hy-Vee 2
+686,10028,ShopRite
+687,10028,Hannaford 2
+688,10028,Albertsons 2
+689,10028,Walmart 2
+690,10028,Safeway 3
+691,10028,Publix 3
+692,10028,Whole Foods 3
+693,10028,Publix
+694,10028,Whole Foods 2
+695,10028,Aldi 3
+696,10028,Wegmans 2
+697,10028,Stop & Shop 2
+698,10028,Hannaford
+699,10028,Whole Foods 2
+700,10028,Stop & Shop
+701,10028,Kroger 3
+702,10028,Hy-Vee
+703,10028,Hannaford 2
+704,10028,Publix 2
+705,10028,Wegmans 2
+706,10028,Meijer 2
+707,10028,Aldi
+708,10028,Hy-Vee 2
+709,10028,ShopRite
+710,10028,Costco 3
+711,10028,Sprouts 2
+712,10028,Publix
+713,10028,Sprouts
+714,10028,Walmart
+715,10028,Safeway
+716,10028,Whole Foods 2
+717,10028,Safeway 2
+718,10028,Publix 3
+719,10028,Hy-Vee
+720,10028,Albertsons
+721,10028,Publix 2
+722,10028,H-E-B
+723,10028,Food Lion 2
+724,10028,Whole Foods
+725,10028,ShopRite
+726,10028,Trader Joe's
+727,10028,Walmart 3
+728,10028,Giant Eagle 2
+729,10029,Walmart 2
+730,10029,Hannaford
+731,10029,Publix 2
+732,10029,Wegmans
+733,10029,Stop & Shop
+734,10029,Hy-Vee 2
+735,10029,Publix 2
+736,10029,Kroger
+737,10029,Hannaford 2
+738,10030,Food Lion
+739,10030,Hy-Vee
+740,10030,Trader Joe's
+741,10030,WinCo 3
+742,10030,Publix 3
+743,10030,Publix 2
+744,10030,Wegmans 2
+745,10030,Costco 3
+746,10030,Whole Foods 3
+747,10030,Aldi 3
+748,10030,Wegmans 2
+749,10030,Costco
+750,10030,Albertsons
+751,10030,Food Lion 2
+752,10030,Stop & Shop
+753,10030,Safeway
+754,10030,Kroger 2
+755,10030,Hy-Vee 2
+756,10030,Aldi 2
+757,10030,Hy-Vee 2
+758,10030,Whole Foods 2
+759,10030,Walmart 2
+760,10030,Albertsons 3
+761,10030,Hy-Vee 2
+762,10030,Stop & Shop 2
+763,10030,Costco 3
+764,10030,Wegmans 2
+765,10030,WinCo 2
+766,10030,Stop & Shop
+767,10030,WinCo
+768,10030,Albertsons 3
+769,10030,Walmart 3
+770,10030,Wegmans
+771,10030,Albertsons 3
+772,10030,Hy-Vee 2
+773,10030,Costco
+774,10030,WinCo 2
+775,10030,Food Lion 2
+776,10030,Safeway 2
+777,10030,Trader Joe's 2
+778,10031,Sprouts
+779,10031,H-E-B 2
+780,10031,Wegmans
+781,10031,H-E-B 2
+782,10031,Publix
+783,10031,Giant Eagle
+784,10031,Albertsons 3
+785,10031,Food Lion
+786,10031,Meijer 2
+787,10032,Whole Foods 3
+788,10032,H-E-B
+789,10032,Aldi 2
+790,10032,Publix 2
+791,10032,Kroger 2
+792,10032,Albertsons
+793,10032,Walmart 2
+794,10032,Publix
+795,10032,Kroger 2
+796,10032,Hy-Vee 2
+797,10032,Stop & Shop
+798,10032,Trader Joe's
+799,10032,Kroger 3
+800,10032,Trader Joe's 2
+801,10032,ShopRite 2
+802,10032,WinCo 2
+803,10032,Hannaford
+804,10032,Giant Eagle
+805,10032,H-E-B
+806,10032,Albertsons 3
+807,10032,Sprouts
+808,10032,Kroger
+809,10032,Trader Joe's 3
+810,10032,Trader Joe's 3
+811,10032,ShopRite
+812,10032,Safeway 3
+813,10032,Walmart
+814,10032,Safeway 3
+815,10032,Food Lion 2
+816,10032,Wegmans 2
+817,10032,Hy-Vee 2
+818,10032,Albertsons 2
+819,10032,Wegmans 2
+820,10032,ShopRite
+821,10032,Trader Joe's 3
+822,10032,Walmart 3
+823,10032,Food Lion
+824,10032,Safeway 2
+825,10033,Whole Foods
+826,10033,Trader Joe's 3
+827,10033,Sprouts 2
+828,10033,Aldi
+829,10033,Trader Joe's 2
+830,10033,Walmart 2
+831,10033,Costco
+832,10033,WinCo
+833,10033,Giant Eagle 2
+834,10033,Costco 2
+835,10033,Hy-Vee
+836,10033,Costco
+837,10033,Food Lion 2
+838,10033,Albertsons 2
+839,10033,Publix 3
+840,10033,Kroger 3
+841,10033,Wegmans 2
+842,10033,Trader Joe's
+843,10033,Hannaford
+844,10033,Meijer
+845,10033,Trader Joe's
+846,10033,Giant Eagle 2
+847,10033,Walmart 2
+848,10033,Wegmans
+849,10033,Wegmans
+850,10033,Hy-Vee 2
+851,10033,Whole Foods 3
+852,10033,WinCo 2
+853,10033,Safeway 3
+854,10033,Whole Foods 2
+855,10033,Albertsons 2
+856,10033,Food Lion 2
+857,10033,Sprouts 2
+858,10033,Wegmans
+859,10033,Meijer 2
+860,10033,Aldi 2
+861,10033,WinCo
+862,10033,Food Lion 2
+863,10033,Safeway 3
+864,10033,ShopRite
+865,10034,Publix 3
+866,10034,Wegmans
+867,10034,WinCo 3
+868,10034,Food Lion 2
+869,10034,Giant Eagle
+870,10034,Whole Foods
+871,10034,Whole Foods 2
+872,10034,H-E-B
+873,10034,Giant Eagle 2
+874,10035,Whole Foods
+875,10035,Whole Foods 3
+876,10035,Walmart 2
+877,10035,ShopRite 2
+878,10035,H-E-B
+879,10036,Hannaford
+880,10036,Wegmans
+881,10036,Albertsons
+882,10036,Publix
+883,10036,Walmart 3
+884,10036,Safeway 2
+885,10036,Trader Joe's 3
+886,10036,ShopRite
+887,10036,Wegmans
+888,10036,Walmart 3
+889,10036,Costco 2
+890,10036,Hy-Vee
+891,10036,Aldi
+892,10036,Walmart
+893,10036,Sprouts
+894,10036,Giant Eagle 2
+895,10036,Trader Joe's 3
+896,10036,WinCo 3
+897,10036,Food Lion
+898,10036,Sprouts 2
+899,10036,Hannaford 2
+900,10036,Hannaford
+901,10036,Hannaford 2
+902,10036,WinCo 3
+903,10036,WinCo 2
+904,10036,H-E-B 2
+905,10036,Stop & Shop 2
+906,10036,Sprouts
+907,10036,Whole Foods 3
+908,10036,Albertsons 3
+909,10036,Aldi 2
+910,10036,WinCo
+911,10036,Whole Foods 2
+912,10037,Safeway 3
+913,10037,Safeway 2
+914,10037,Trader Joe's
+915,10037,Giant Eagle
+916,10037,Meijer 2
+917,10037,Albertsons 2
+918,10037,Sprouts
+919,10037,Kroger 2
+920,10037,Trader Joe's 2
+921,10037,H-E-B 2
+922,10037,Safeway 2
+923,10037,Aldi
+924,10037,Publix 3
+925,10037,ShopRite
+926,10037,Walmart 3
+927,10037,Walmart 3
+928,10037,Whole Foods 2
+929,10037,Kroger 3
+930,10037,Wegmans
+931,10037,Wegmans 2
+932,10037,Wegmans
+933,10037,ShopRite 2
+934,10037,Hy-Vee 2
+935,10037,H-E-B
+936,10037,Safeway
+937,10037,Giant Eagle 2
+938,10037,Albertsons
+939,10037,Albertsons 3
+940,10037,Hannaford 2
+941,10037,Kroger 3
+942,10038,Safeway 3
+943,10038,Whole Foods 3
+944,10038,Costco 2
+945,10038,Whole Foods 3
+946,10038,H-E-B 2
+947,10038,ShopRite
+948,10038,Kroger 2
+949,10038,Costco
+950,10038,Albertsons
+951,10038,Kroger 3
+952,10038,Kroger 3
+953,10038,Sprouts 2
+954,10038,Safeway 2
+955,10038,Walmart 3
+956,10038,Kroger 3
+957,10038,Hy-Vee 2
+958,10038,ShopRite
+959,10038,Aldi 3
+960,10038,ShopRite
+961,10038,Safeway 3
+962,10038,Hannaford
+963,10038,Aldi 3
+964,10038,Kroger
+965,10038,H-E-B
+966,10038,Safeway
+967,10039,Safeway 3
+968,10039,Giant Eagle
+969,10039,Hy-Vee 2
+970,10039,Trader Joe's 2
+971,10040,Whole Foods 2
+972,10040,Stop & Shop
+973,10040,WinCo
+974,10040,Walmart 2
+975,10040,WinCo 3
+976,10040,Wegmans
+977,10040,Albertsons
+978,10040,Costco 2
+979,10040,Food Lion
+980,10040,ShopRite
+981,10040,Albertsons
+982,10040,WinCo
+983,10040,Publix 3
+984,10040,Costco
+985,10040,Trader Joe's 3
+986,10040,WinCo 2
+987,10040,Costco
+988,10040,Hannaford 2
+989,10040,Safeway 2
+990,10040,Sprouts
+991,10040,Albertsons
+992,10040,Walmart 3
+993,10040,WinCo 2
+994,10040,Hy-Vee 2
+995,10040,Giant Eagle
+996,10040,Publix 3
+997,10040,Safeway 2
+998,10040,Hannaford
+999,10040,Aldi 2
+1000,10040,Trader Joe's
+1001,10040,Trader Joe's
+1002,10040,Sprouts 2
+1003,10040,Safeway 2
+1004,10040,Trader Joe's
+1005,10040,H-E-B
+1006,10040,Stop & Shop 2
+1007,10040,Sprouts
+1008,10040,Sprouts
+1009,10041,Publix 3
+1010,10041,Costco
+1011,10041,H-E-B 2
+1012,10041,Walmart 2
+1013,10041,Albertsons 3
+1014,10041,Costco 3
+1015,10041,Walmart
+1016,10041,Walmart
+1017,10041,Walmart
+1018,10041,Trader Joe's 2
+1019,10041,H-E-B
+1020,10041,Trader Joe's 2
+1021,10041,WinCo
+1022,10041,Hannaford 2
+1023,10041,Food Lion
+1024,10041,Publix 3
+1025,10041,Kroger 2
+1026,10041,Hannaford
+1027,10041,Publix
+1028,10041,Albertsons 2
+1029,10041,Food Lion 2
+1030,10041,Hy-Vee 2
+1031,10041,Hannaford
+1032,10041,Hy-Vee 2
+1033,10041,Aldi 3
+1034,10041,H-E-B
+1035,10041,Giant Eagle 2
+1036,10041,Safeway
+1037,10041,Sprouts
+1038,10041,ShopRite 2
+1039,10041,Costco 3
+1040,10041,Walmart 3
+1041,10041,Albertsons
+1042,10041,Walmart 3
+1043,10041,Hy-Vee
+1044,10041,Hy-Vee 2
+1045,10041,Wegmans
+1046,10041,Whole Foods 3
+1047,10041,Hannaford 2
+1048,10041,Whole Foods 2
+1049,10041,Publix 3
+1050,10042,Safeway
+1051,10042,Aldi 3
+1052,10042,Hy-Vee
+1053,10042,Publix 2
+1054,10042,Hannaford 2
+1055,10042,Whole Foods 3
+1056,10042,Giant Eagle
+1057,10042,Sprouts
+1058,10042,Publix 3
+1059,10042,Albertsons
+1060,10042,Hannaford
+1061,10042,WinCo
+1062,10042,Giant Eagle 2
+1063,10042,Stop & Shop 2
+1064,10042,Costco
+1065,10042,Costco
+1066,10042,Giant Eagle 2
+1067,10042,Sprouts 2
+1068,10042,Kroger 2
+1069,10042,WinCo
+1070,10042,Safeway 3
+1071,10042,Publix 2
+1072,10042,WinCo
+1073,10042,Trader Joe's 3
+1074,10042,Safeway 2
+1075,10043,Safeway 2
+1076,10043,Whole Foods 3
+1077,10043,Kroger
+1078,10043,Safeway 2
+1079,10043,Publix
+1080,10043,Giant Eagle 2
+1081,10043,Costco 2
+1082,10043,Aldi
+1083,10043,ShopRite
+1084,10043,Hy-Vee 2
+1085,10043,ShopRite
+1086,10043,Giant Eagle
+1087,10043,Albertsons
+1088,10043,Whole Foods 2
+1089,10043,Stop & Shop 2
+1090,10043,Hy-Vee 2
+1091,10043,Kroger 3
+1092,10043,Sprouts 2
+1093,10043,Giant Eagle
+1094,10043,Albertsons
+1095,10043,Aldi
+1096,10043,Albertsons
+1097,10043,Meijer 2
+1098,10043,Publix 3
+1099,10043,WinCo
+1100,10044,Stop & Shop 2
+1101,10044,Hannaford 2
+1102,10044,Whole Foods
+1103,10044,Publix 2
+1104,10044,Kroger 3
+1105,10044,Sprouts 2
+1106,10045,Costco 3
+1107,10045,Stop & Shop
+1108,10045,Costco 2
+1109,10045,Albertsons
+1110,10045,H-E-B 2
+1111,10045,Sprouts
+1112,10045,Walmart 2
+1113,10045,Sprouts 2
+1114,10045,Sprouts 2
+1115,10045,Hy-Vee 2
+1116,10045,Costco 2
+1117,10045,Trader Joe's
+1118,10045,Aldi 2
+1119,10045,Hy-Vee
+1120,10045,Publix 3
+1121,10045,Wegmans 2
+1122,10045,Albertsons 2
+1123,10045,Costco 2
+1124,10045,Giant Eagle
+1125,10045,Costco 3
+1126,10045,Publix
+1127,10045,Albertsons 2
+1128,10045,H-E-B
+1129,10045,Costco
+1130,10045,Wegmans
+1131,10045,Walmart 2
+1132,10045,Trader Joe's
+1133,10045,WinCo
+1134,10045,Publix 3
+1135,10045,Food Lion 2
+1136,10045,H-E-B
+1137,10045,Aldi 3
+1138,10045,Costco
+1139,10046,Aldi 2
+1140,10046,Food Lion 2
+1141,10046,ShopRite 2
+1142,10046,Kroger 3
+1143,10046,Albertsons 2
+1144,10046,Aldi 2
+1145,10046,Albertsons 2
+1146,10046,Trader Joe's
+1147,10046,Safeway 3
+1148,10046,Hy-Vee
+1149,10046,Meijer 2
+1150,10046,Giant Eagle 2
+1151,10046,Safeway
+1152,10046,Costco 3
+1153,10046,Safeway
+1154,10046,WinCo 3
+1155,10046,H-E-B 2
+1156,10046,Costco 2
+1157,10046,Aldi
+1158,10046,Costco 2
+1159,10046,Albertsons 2
+1160,10046,Sprouts
+1161,10046,Whole Foods 3
+1162,10046,Hannaford 2
+1163,10046,Giant Eagle
+1164,10046,Hannaford 2
+1165,10046,Hy-Vee 2
+1166,10046,Safeway
+1167,10046,Giant Eagle
+1168,10046,H-E-B 2
+1169,10046,Trader Joe's 2
+1170,10046,WinCo 2
+1171,10046,H-E-B 2
+1172,10046,WinCo
+1173,10046,Costco 3
+1174,10046,Hy-Vee
+1175,10046,Albertsons
+1176,10046,Hannaford 2
+1177,10046,Albertsons
+1178,10047,H-E-B
+1179,10047,Aldi 2
+1180,10047,Aldi 3
+1181,10047,Aldi 3
+1182,10047,Hannaford 2
+1183,10047,Albertsons 3
+1184,10047,H-E-B
+1185,10047,WinCo 3
+1186,10047,ShopRite
+1187,10047,H-E-B 2
+1188,10047,Stop & Shop
+1189,10047,Hy-Vee 2
+1190,10047,ShopRite 2
+1191,10047,Wegmans
+1192,10047,ShopRite
+1193,10047,Trader Joe's
+1194,10048,Aldi
+1195,10048,Stop & Shop 2
+1196,10048,WinCo
+1197,10048,Publix 2
+1198,10048,Giant Eagle 2
+1199,10048,Trader Joe's
+1200,10048,Costco
+1201,10048,Costco 2
+1202,10048,WinCo 3
+1203,10048,Sprouts
+1204,10048,Trader Joe's 3
+1205,10048,Hannaford 2
+1206,10048,Food Lion
+1207,10048,Albertsons 2
+1208,10048,Hy-Vee 2
+1209,10048,Meijer 2
+1210,10048,Publix 2
+1211,10048,H-E-B 2
+1212,10048,H-E-B 2
+1213,10048,Trader Joe's
+1214,10048,Publix
+1215,10048,Aldi 2
+1216,10048,Wegmans
+1217,10048,Safeway
+1218,10048,Wegmans 2
+1219,10048,Walmart
+1220,10048,Safeway
+1221,10048,Aldi 3
+1222,10048,Costco 2
+1223,10048,Stop & Shop
+1224,10048,Walmart 2
+1225,10048,ShopRite
+1226,10048,Kroger 3
+1227,10048,Whole Foods 2
+1228,10048,Kroger 2
+1229,10048,Walmart 2
+1230,10048,Whole Foods 3
+1231,10048,ShopRite 2
+1232,10048,ShopRite 2
+1233,10048,WinCo 3
+1234,10048,Trader Joe's 2
+1235,10048,WinCo
+1236,10048,Costco 2
+1237,10048,Kroger
+1238,10048,Kroger
+1239,10048,Walmart 3
+1240,10048,Publix
+1241,10048,Publix 2
+1242,10048,Hy-Vee 2
+1243,10049,Hannaford 2
+1244,10049,Stop & Shop
+1245,10049,WinCo 3
+1246,10049,Wegmans
+1247,10049,Publix 2
+1248,10049,Sprouts 2
+1249,10049,Costco 2
+1250,10049,ShopRite 2
+1251,10049,Food Lion 2
+1252,10049,WinCo
+1253,10049,Sprouts
+1254,10049,Whole Foods 2
+1255,10049,Publix 3
+1256,10049,Aldi 2
+1257,10049,Whole Foods 2
+1258,10049,Hy-Vee 2
+1259,10049,Hannaford 2
+1260,10049,Walmart 3
+1261,10049,H-E-B
+1262,10049,Trader Joe's 3
+1263,10049,Whole Foods 3
+1264,10049,Meijer 2
+1265,10050,Giant Eagle 2
+1266,10050,Safeway 2
+1267,10050,Walmart
+1268,10050,Wegmans
+1269,10050,Aldi 3
+1270,10050,Hy-Vee 2
+1271,10050,Aldi
+1272,10050,Giant Eagle
+1273,10050,Giant Eagle 2
+1274,10050,Walmart
+1275,10050,Hy-Vee
+1276,10050,Costco 3
+1277,10050,Kroger
+1278,10050,Albertsons
+1279,10050,Walmart
