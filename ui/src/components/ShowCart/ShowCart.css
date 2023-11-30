@@ -41,7 +41,10 @@
 }
 .show-cart-item-name {
     width: 100%;
+    max-width: 100%;
     text-align: center;
+    white-space: nowrap;
+    overflow-x:scroll;
 }
 .show-cart-item-remove {
     display: flex;
