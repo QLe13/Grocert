@@ -413,3 +413,5 @@ INFO: Unsupported notification method: $/setTrace
 2023.12.01 22:41:48 INFO  time: Connected to build server in 0.73s
 2023.12.01 22:41:48 INFO  Connected to Build server: Bloop v1.5.11
 2023.12.01 22:41:51 INFO  time: indexed workspace in 2.85s
+Dec 01, 2023 11:36:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
