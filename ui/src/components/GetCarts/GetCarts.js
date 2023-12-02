@@ -1,6 +1,7 @@
 import React from "react";
 import "./GetCarts.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useCookies} from 'react-cookie';
 
 
   
@@ -8,12 +9,39 @@ import { useState } from "react";
 const GetCarts = (props) => {
     const carts = props.calculateCarts;
 
+    const [selectedCarts, setSelectedCarts] = useState([]); 
+
+    useEffect(() => {
+        setSelectedCarts(carts.map((cart) => false));
+    }, [carts]);
+
+    // checking if cookies is available
+    const [cookies, setCookie] = useCookies(['userSelectedCarts']);
+
+
     const [showingCarts, setShowingCarts] = useState(carts.map((cart) => false));
+
+
+
+    const handleSaveSelectedCartsToCookie = () => {
+        const selectedCartsWithValues = carts.filter((_, index) => selectedCarts[index]);
+        if (!cookies.userSelectedCarts) {
+            setCookie('userSelectedCarts', selectedCartsWithValues, {path: '/'});
+        } else {
+            selectedCartsWithValues.forEach((selectedCart) => {
+                cookies.userSelectedCarts.push(selectedCart);
+                }
+            );
+            setCookie('userSelectedCarts', cookies.userSelectedCarts, {path: '/'});
+        }
+        props.setCalculateCarts([]);
+        props.setShowCalculateCarts(false);
+    }
 
     return (
             <div className="get-carts-wrapper">
                 <div className="get-carts-header">
-                    <div className="get-carts-title">Availability</div>
+                    <div className="get-carts-title">Availability - Click to select</div>
                     <button className="get-carts-description"
                     onClick={() => {
                         props.setCalculateCarts([])
@@ -24,9 +52,20 @@ const GetCarts = (props) => {
                 <div className="get-carts-result">
                     {
                         carts.map((cart, ind) => (
-                            <div className="get-carts-store">
+                            <div 
+                                className={`get-carts-store ${selectedCarts[ind] ? 'selected' : ''}`}
+                            >
                                 <div className="get-carts-store-small">
-                                    <div className="get-carts-store-small-name">{cart.storeName}</div>
+                                    <div className="get-carts-store-small-name"
+                                    onClick={() => {
+                                        setSelectedCarts(selectedCarts.map((selectedCart, index) => {
+                                            if (index === ind) {
+                                                return !selectedCart;
+                                            }
+                                            return selectedCart;
+                                        }))
+                                    }}
+                                    >{cart.storeName}</div>
                                     <div className="get-carts-store-small-info">
                                         <div className="get-carts-store-small-info-cost-id">
                                             <div className="get-carts-store-cost">$ {cart.totalCost}</div>
@@ -66,7 +105,12 @@ const GetCarts = (props) => {
                         ))
                     }
                 </div>
-                <div className="get-carts-save"></div>
+                <div className="get-carts-save">
+                    <button 
+                        className="get-carts-save-button"
+                        onClick={handleSaveSelectedCartsToCookie}
+                    >Save ({selectedCarts.filter((val) => val===true).length})</button>
+                </div>
             </div>
         );
     }
