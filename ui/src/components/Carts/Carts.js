@@ -14,7 +14,9 @@ const Carts = () => {
         if (temp.length === 0) {
             removeCookie('userSelectedCarts', { path: '/' });
             window.location.href = "/";
+            return;
         }
+        selectedCarts === ind ? setSelectedCarts(0) : setSelectedCarts(selectedCarts);
         setCookie('userSelectedCarts', temp, { path: '/' });
     }
 
@@ -41,7 +43,7 @@ const Carts = () => {
                         {
                             cookies.userSelectedCarts.map((cart, ind) => (
                                 <div className={`saved-carts-store ${selectedCarts === ind ? "selected" : ""}`}
-                                    key={cart.storeId}
+                                    key={cart.storeId+ind}
                                     onClick={() => {
                                       setSelectedCarts(ind);
                                     }}>
@@ -59,7 +61,7 @@ const Carts = () => {
                 <div className='saved-carts-selected-store-cart-content'>
                     {
                         cookies.userSelectedCarts[selectedCarts].cart.map((item, ind) => (
-                            <div className='saved-carts-selected-store-cart-item' key={item.id}>
+                            <div className='saved-carts-selected-store-cart-item' key={JSON.stringify(item)+item.id}>
                                 <div className='saved-carts-selected-store-cart-item-name'>
                                     {item.item.name}
                                 </div>
