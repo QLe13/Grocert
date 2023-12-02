@@ -54,6 +54,7 @@ const GetCarts = (props) => {
                         carts.map((cart, ind) => (
                             <div 
                                 className={`get-carts-store ${selectedCarts[ind] ? 'selected' : ''}`}
+                                key={cart.storeId}
                             >
                                 <div className="get-carts-store-small">
                                     <div className="get-carts-store-small-name"
@@ -92,7 +93,7 @@ const GetCarts = (props) => {
                                     <div className={`get-carts-store-cart ${showingCarts[ind] ? 'active':''}`}>
                                         {
                                             cart.cart.map((item) => (
-                                                <div className="get-carts-store-cart-item">
+                                                <div className="get-carts-store-cart-item" key={JSON.stringify(item)}>
                                                     <div className="get-carts-store-cart-item-name">{item.item.name}</div>
                                                     <div className="get-carts-store-cart-item-cost">Cost: {item.cost}</div>
                                                     <div className="get-carts-store-cart-item-amount">Amount:{item.item.amount}</div>
