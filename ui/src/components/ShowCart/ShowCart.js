@@ -45,7 +45,8 @@ const ShowCart = (props) => {
                         >
                             <div className="show-cart-item-name">{item.name}</div>
                             <div className="show-cart-item-remove" 
-                                 onClick={() => toggleRemoveItem(ind)}>-</div>
+                                 onClick={() => toggleRemoveItem(ind)}>-
+                            </div>
                         </div>
                     )
                 })}

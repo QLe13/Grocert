@@ -58,6 +58,9 @@
     margin: 0 5% 10px 5%;
     border-radius: 10px;
 }
+.get-carts-store.selected {
+    background-color: #94C973;
+}
 
 .get-carts-store-small {
     display: flex;
@@ -73,6 +76,7 @@
     font-weight: bold;
     font-size: larger;
     margin: 3%;
+    cursor: pointer;
 }
 .get-carts-store-small-info {
     display: flex;
@@ -127,4 +131,28 @@
     align-items: center;
     margin: 0 5% 10px 5%;
     padding: 5px;
+}
+
+
+.get-carts-save {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.get-carts-save button {
+    background-color: #94C973;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    height: 50%;
+    width: 35%;
+    border-radius: 10px;
+}
+.get-carts-save button:hover {
+    color: #E96A4D; 
+    transition: 0.5s;
 }

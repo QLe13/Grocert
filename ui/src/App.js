@@ -11,6 +11,8 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import NavBar from "./components/NavBar/NavBar";
 import ShowCart from "./components/ShowCart/ShowCart";
 import GetCarts from "./components/GetCarts/GetCarts";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Carts from "./components/Carts/Carts";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
 import sampleGroceries from "./images/sampleGrocery.png";
@@ -235,6 +237,7 @@ const Home = () => {
 
           </>
         )}
+
         {showCalculateCarts && <GetCarts calculateCarts={calculateCarts} setCalculateCarts={setCalculateCarts} setShowCalculateCarts={setShowCalculateCarts}/>}
       </>
   );
@@ -263,6 +266,8 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="about" element={<AboutUs/>}/>
+            <Route path="savedCarts" element={<Carts/>}/>
           </Routes>
         </div>
       </Router>
