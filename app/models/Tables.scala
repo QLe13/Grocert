@@ -23,19 +23,20 @@ trait Tables {
    *  @param productId Database column product_id SqlType(int4)
    *  @param storeId Database column store_id SqlType(int4)
    *  @param units Database column units SqlType(bpchar), Length(20,false)
-   *  @param currentPrice Database column current_price SqlType(int4)
+   *  @param dollar Database column dollar SqlType(int4)
+   *  @param cents Database column cents SqlType(int4)
    *  @param amount Database column amount SqlType(varchar), Length(255,true) */
-  case class HasRow(relationId: Int, productId: Int, storeId: Int, units: String, currentPrice: Int, amount: String)
+  case class HasRow(relationId: Int, productId: Int, storeId: Int, units: String, dollar: Int, cents: Int, amount: String)
   /** GetResult implicit for fetching HasRow objects using plain SQL queries */
   implicit def GetResultHasRow(implicit e0: GR[Int], e1: GR[String]): GR[HasRow] = GR{
     prs => import prs._
-    HasRow.tupled((<<[Int], <<[Int], <<[Int], <<[String], <<[Int], <<[String]))
+    HasRow.tupled((<<[Int], <<[Int], <<[Int], <<[String], <<[Int], <<[Int], <<[String]))
   }
   /** Table description of table has. Objects of this class serve as prototypes for rows in queries. */
   class Has(_tableTag: Tag) extends profile.api.Table[HasRow](_tableTag, "has") {
-    def * = (relationId, productId, storeId, units, currentPrice, amount).<>(HasRow.tupled, HasRow.unapply)
+    def * = (relationId, productId, storeId, units, dollar, cents, amount).<>(HasRow.tupled, HasRow.unapply)
     /** Maps whole row to an option. Useful for outer joins. */
-    def ? = ((Rep.Some(relationId), Rep.Some(productId), Rep.Some(storeId), Rep.Some(units), Rep.Some(currentPrice), Rep.Some(amount))).shaped.<>({r=>import r._; _1.map(_=> HasRow.tupled((_1.get, _2.get, _3.get, _4.get, _5.get, _6.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
+    def ? = ((Rep.Some(relationId), Rep.Some(productId), Rep.Some(storeId), Rep.Some(units), Rep.Some(dollar), Rep.Some(cents), Rep.Some(amount))).shaped.<>({r=>import r._; _1.map(_=> HasRow.tupled((_1.get, _2.get, _3.get, _4.get, _5.get, _6.get, _7.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
 
     /** Database column relation_id SqlType(serial), AutoInc, PrimaryKey */
     val relationId: Rep[Int] = column[Int]("relation_id", O.AutoInc, O.PrimaryKey)
@@ -45,8 +46,10 @@ trait Tables {
     val storeId: Rep[Int] = column[Int]("store_id")
     /** Database column units SqlType(bpchar), Length(20,false) */
     val units: Rep[String] = column[String]("units", O.Length(20,varying=false))
-    /** Database column current_price SqlType(int4) */
-    val currentPrice: Rep[Int] = column[Int]("current_price")
+    /** Database column dollar SqlType(int4) */
+    val dollar: Rep[Int] = column[Int]("dollar")
+    /** Database column cents SqlType(int4) */
+    val cents: Rep[Int] = column[Int]("cents")
     /** Database column amount SqlType(varchar), Length(255,true) */
     val amount: Rep[String] = column[String]("amount", O.Length(255,varying=true))
 
@@ -90,24 +93,36 @@ trait Tables {
   /** Entity class storing rows of table Product
    *  @param productId Database column product_id SqlType(int4), PrimaryKey
    *  @param category Database column category SqlType(bpchar), Length(200,false)
+   *  @param amount Database column amount SqlType(varchar), Length(255,true)
+   *  @param units Database column units SqlType(bpchar), Length(20,false)
+   *  @param dollar Database column dollar SqlType(int4)
+   *  @param cents Database column cents SqlType(int4)
    *  @param name Database column name SqlType(bpchar), Length(200,false)
    *  @param imageId Database column image_id SqlType(int4), Default(None) */
-  case class ProductRow(productId: Int, category: String, name: String, imageId: Option[Int] = None)
+  case class ProductRow(productId: Int, category: String, amount: String, units: String, dollar: Int, cents: Int, name: String, imageId: Option[Int] = None)
   /** GetResult implicit for fetching ProductRow objects using plain SQL queries */
   implicit def GetResultProductRow(implicit e0: GR[Int], e1: GR[String], e2: GR[Option[Int]]): GR[ProductRow] = GR{
     prs => import prs._
-    ProductRow.tupled((<<[Int], <<[String], <<[String], <<?[Int]))
+    ProductRow.tupled((<<[Int], <<[String], <<[String], <<[String], <<[Int], <<[Int], <<[String], <<?[Int]))
   }
   /** Table description of table product. Objects of this class serve as prototypes for rows in queries. */
   class Product(_tableTag: Tag) extends profile.api.Table[ProductRow](_tableTag, "product") {
-    def * = (productId, category, name, imageId).<>(ProductRow.tupled, ProductRow.unapply)
+    def * = (productId, category, amount, units, dollar, cents, name, imageId).<>(ProductRow.tupled, ProductRow.unapply)
     /** Maps whole row to an option. Useful for outer joins. */
-    def ? = ((Rep.Some(productId), Rep.Some(category), Rep.Some(name), imageId)).shaped.<>({r=>import r._; _1.map(_=> ProductRow.tupled((_1.get, _2.get, _3.get, _4)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
+    def ? = ((Rep.Some(productId), Rep.Some(category), Rep.Some(amount), Rep.Some(units), Rep.Some(dollar), Rep.Some(cents), Rep.Some(name), imageId)).shaped.<>({r=>import r._; _1.map(_=> ProductRow.tupled((_1.get, _2.get, _3.get, _4.get, _5.get, _6.get, _7.get, _8)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
 
     /** Database column product_id SqlType(int4), PrimaryKey */
     val productId: Rep[Int] = column[Int]("product_id", O.PrimaryKey)
     /** Database column category SqlType(bpchar), Length(200,false) */
     val category: Rep[String] = column[String]("category", O.Length(200,varying=false))
+    /** Database column amount SqlType(varchar), Length(255,true) */
+    val amount: Rep[String] = column[String]("amount", O.Length(255,varying=true))
+    /** Database column units SqlType(bpchar), Length(20,false) */
+    val units: Rep[String] = column[String]("units", O.Length(20,varying=false))
+    /** Database column dollar SqlType(int4) */
+    val dollar: Rep[Int] = column[Int]("dollar")
+    /** Database column cents SqlType(int4) */
+    val cents: Rep[Int] = column[Int]("cents")
     /** Database column name SqlType(bpchar), Length(200,false) */
     val name: Rep[String] = column[String]("name", O.Length(200,varying=false))
     /** Database column image_id SqlType(int4), Default(None) */
