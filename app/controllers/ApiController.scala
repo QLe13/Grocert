@@ -14,7 +14,7 @@ import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Future
 import models._
 
-case class Item(id: Int, name: String, unit: String, amount: Int, image: String, category: String)
+case class Item(id: Int, name: String, unit: String, amount: String, image: String, category: String)
 case class ItemAndCost(item: Item, cost: Int)
 case class StoreCalculation(storeId: Int, storeName: String, totalCost: Int, cart: List[ItemAndCost])
 case class ItemSearchRequest(searchTerm: String)
@@ -65,13 +65,13 @@ class ApiController @Inject()(protected val dbConfigProvider: DatabaseConfigProv
 
 object ExampleObjects {
   val exampleItems = List(
-    Item(323212, "Banana", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323213, "Apple", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323214, "Orange", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323215, "Grape", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323216, "Avocado", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323217, "Milk", "lb", 5, "https://picsum.photos/200/300", "produce"),
-    Item(323218, "Pizza", "lb", 5, "https://picsum.photos/200/300", "produce"),
+    Item(323212, "Banana", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323213, "Apple", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323214, "Orange", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323215, "Grape", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323216, "Avocado", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323217, "Milk", "lb", "5", "https://picsum.photos/200/300", "produce"),
+    Item(323218, "Pizza", "lb", "5", "https://picsum.photos/200/300", "produce"),
   )
 
   val exampleCartCalculation = List(
