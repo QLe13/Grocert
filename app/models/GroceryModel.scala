@@ -16,11 +16,12 @@ class GroceryModel(db: Database)(implicit ec: ExecutionContext) {
     db.run(
       (for {
         prod <- Product if prod.name.toLowerCase like s"%${searchTerm.toLowerCase}%"
+        image <- Images if image.imageId === prod.imageId
       } yield {
-        (prod.productId, prod.category, prod.name)
+        (prod.productId, prod.category, prod.name, image.imagePath)
       }).result
     ).map { res => res.map { prod =>
-      Item(prod._1, prod._3, "TODO", -1, "TODO", prod._2)
+      Item(prod._1, prod._3, "TODO", -1, prod._4, prod._2)
     }}
   }
 
@@ -29,10 +30,10 @@ class GroceryModel(db: Database)(implicit ec: ExecutionContext) {
       (for {
         store <- Stores if store.zipCode === zipCode
       } yield {
-        (store.storeId, store.zipCode)
+        (store.storeId, store.zipCode, store.storeName)
       }).result
     ).map { res => res.map { prod =>
-      Store(prod._1, "HEB", prod._2)
+      Store(prod._1, prod._3, prod._2)
     }}
   } 
 
@@ -60,7 +61,7 @@ class GroceryModel(db: Database)(implicit ec: ExecutionContext) {
           throw new Error("storeId not found")
         case Some(sac) =>
           val newTotalCost = sac.totalCost + intPrice
-          val newCart = sac.cart :+ ItemAndCost(Item(product.productId, product.name.trim(), "unit", -1, "image", product.category.trim()), intPrice)
+          val newCart = sac.cart :+ ItemAndCost(Item(product.productId, product.name.trim(), has.units, -1, "image", product.category.trim()), intPrice)
           storesAndCosts(has.storeId) = StoreCalculation(has.storeId, sac.storeName, newTotalCost, newCart)
       }
     }}.map(done => storesAndCosts.values.toList)
