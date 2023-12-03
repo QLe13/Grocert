@@ -1,4 +1,4 @@
-name := """play-scala-react-seed"""
+name := """Budget Bites"""
 
 version := "1.0-SNAPSHOT"
 
