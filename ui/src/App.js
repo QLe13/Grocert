@@ -15,7 +15,6 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Carts from "./components/Carts/Carts";
 import "./App.css";
 import logo from "./images/BudgetBites.png";
-import sampleGroceries from "./images/sampleGrocery.png";
 
 
 
@@ -129,7 +128,7 @@ const Home = () => {
       const mappedData = innerData.map((item) => ({
         ...item,
         "selected": false,
-        "image": sampleGroceries,
+        "image": axios.defaults.baseURL.replace('/api','') + item.image,
       }));
       //reset session cart
       setHaveSearch(mappedData);
