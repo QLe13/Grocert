@@ -31,6 +31,15 @@ const Carts = () => {
         }
         setCookie('userSelectedCarts', temp, { path: '/' });
     }
+    const formatTotalCost = (value) => {
+        const stringValue = value.toString();
+        if (stringValue.length <= 2) {
+            // Handle values less than 100
+            return `0.${stringValue.padStart(2, '0')}`;
+        } else {
+            return `${stringValue.slice(0, -2)}.${stringValue.slice(-2)}`;
+        }
+    }
 
 
 
@@ -66,7 +75,7 @@ const Carts = () => {
                                     {item.item.name}
                                 </div>
                                 <div className='saved-carts-selected-store-cart-item-amount'>
-                                    Amount:{item.item.amount} ${item.cost}
+                                    Amount:{item.item.amount} ${formatTotalCost(item.cost)}
                                     <div className="saved-carts-selected-store-cart-item-amount-remove" 
                                         onClick={()=>handleRemoveItem(ind)}
                                         >-
@@ -79,7 +88,8 @@ const Carts = () => {
 
                 <div className='saved-carts-selected-store-cart-summary'>
                     <div className='saved-carts-selected-store-cart-summary-total'>
-                        Total: ${cookies.userSelectedCarts[selectedCarts].totalCost}
+                        Total: ${formatTotalCost(cookies.userSelectedCarts[selectedCarts].totalCost)}
+
                     </div>
                     <button className='saved-carts-selected-store-cart-summary-button'
                             onClick={()=>handleRemoveCart(selectedCarts)}

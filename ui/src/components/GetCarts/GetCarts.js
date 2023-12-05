@@ -7,7 +7,9 @@ import {useCookies} from 'react-cookie';
   
 
 const GetCarts = (props) => {
-    const carts = props.calculateCarts;
+    const carts = props.calculateCarts.sort((a, b) => a.totalCost - b.totalCost);
+
+    console.log(carts);
 
     const [selectedCarts, setSelectedCarts] = useState([]); 
 
@@ -36,6 +38,15 @@ const GetCarts = (props) => {
         }
         props.setCalculateCarts([]);
         props.setShowCalculateCarts(false);
+    }
+    const formatTotalCost = (value) => {
+        const stringValue = value.toString();
+        if (stringValue.length <= 2) {
+            // Handle values less than 100
+            return `0.${stringValue.padStart(2, '0')}`;
+        } else {
+            return `${stringValue.slice(0, -2)}.${stringValue.slice(-2)}`;
+        }
     }
 
     return (
@@ -69,7 +80,7 @@ const GetCarts = (props) => {
                                     >{cart.storeName}</div>
                                     <div className="get-carts-store-small-info">
                                         <div className="get-carts-store-small-info-cost-id">
-                                            <div className="get-carts-store-cost">$ {cart.totalCost}</div>
+                                            <div className="get-carts-store-cost">$ {formatTotalCost(cart.totalCost)}</div>
                                             <div className="get-carts-store-id">id: {cart.storeId}</div>
                                         </div>
                                         <button onClick={() =>(
@@ -95,7 +106,7 @@ const GetCarts = (props) => {
                                             cart.cart.map((item) => (
                                                 <div className="get-carts-store-cart-item" key={JSON.stringify(item)}>
                                                     <div className="get-carts-store-cart-item-name">{item.item.name}</div>
-                                                    <div className="get-carts-store-cart-item-cost">Cost: {item.cost}</div>
+                                                    <div className="get-carts-store-cart-item-cost">Cost: ${formatTotalCost(item.cost)} </div>
                                                     <div className="get-carts-store-cart-item-amount">Amount:{item.item.amount}</div>
                                                 </div>
                                             ))
